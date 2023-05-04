@@ -1,0 +1,127 @@
+.main {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: auto;
+}
+/* left */
+.left {
+  border: 1px solid gainsboro;
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+/* left Top */
+.leftTop {
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.leftTop h1 {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 5px;
+}
+.SaveForLater {
+  display: flex;
+  width: 21%;
+  justify-content: space-around;
+  padding-top: 8px;
+  margin-right: 25px;
+}
+.SaveForLater > p {
+  color: #006064;
+  font-weight: 500;
+}
+
+/* left Bottom */
+.leftBottom {
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.leftBottom > div:nth-child(1) {
+  width: 25%;
+  height: 140px;
+  padding-top: 30px;
+}
+.leftBottom > div:nth-child(1) img {
+  width: 50%;
+  height: 80%;
+  margin: auto;
+}
+.leftBottom > div:nth-child(2) {
+  width: 50%;
+}
+
+.leftBottomPrice {
+  margin-top: 20px;
+  color: orangered;
+}
+.leftBottomLine {
+  font-size: 14px;
+  color: grey;
+  margin-top: 10px;
+}
+.leftBottom > div:nth-child(3) {
+  width: 20%;
+  display: grid;
+  text-align: center;
+  padding-top: 20px;
+}
+.leftSelect {
+  width: 70%;
+}
+.delete {
+  width: 80%;
+  text-align: right;
+}
+
+/* right side */
+.right {
+  width: 33%;
+  padding: 5px;
+}
+.rightTop {
+  border: 1px solid gainsboro;
+  padding: 20px;
+  align-items: center;
+  margin-top: 3px;
+}
+.rightTopCart {
+  font-size: 18px;
+}
+.rightTopCart span {
+  font-size: 25px;
+  font-weight: 500;
+}
+.rightTopCoupon {
+  margin-top: 35px;
+}
+.rightBottom {
+  border: 1px solid gainsboro;
+  margin-top: 30px;
+  padding: 15px;
+}
+.rightBottomHeading > h1 {
+  font-size: 20px;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.rightBottomCartTotal div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+.rightBottomAmount {
+  font-size: 18px;
+  font-weight: 550;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
