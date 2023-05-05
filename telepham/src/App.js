@@ -1,5 +1,6 @@
-// import './App.css';
-// import SignUpPage from './components/SignUpPage';
+
+
+
 import Homepage from './pages/Homepage';
 import Navbar from "./components/Navbar"
 import "./App.scss"
@@ -13,6 +14,7 @@ function App() {
      <Main/>
       {/* <Homepage/> */}
       {/* <ProductList/> */}
+
     </div>
   );
 }
