@@ -1,5 +1,6 @@
 import cartStyle from "./Cartstyle.module.css";
-import { Button } from "@chakra-ui/react"
+import { Button } from "@chakra-ui/react";
+import Address from "./Address"
 
 const CartPage = () => {
   return (
@@ -47,12 +48,10 @@ const CartPage = () => {
       </div>
       <div className={cartStyle.rightTop}>
           <div style={{ marginTop: "-20px" }}>
-            {/* <NavLink to="/Payment"> */}
                   {" "}
                   <Button mt={4} colorScheme="teal">
-                   {/* <Address cartTotal={cartTotal} />  */}
+                   <Address /> 
                   </Button>
-                {/* </NavLink> */}
           </div>
       </div>
      <div style={{border:"2px solid teal", marginTop:"30px",padding:"2%", color:"teal" ,fontWeight:"bold"}}>
