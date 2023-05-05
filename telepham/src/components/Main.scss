@@ -1,0 +1,163 @@
+#ppage.ppage {
+  margin-top: 30px;
+  .reco {
+    padding: 5px 20px;
+    color: teal;
+  }
+  .heading {
+    // border: 1px solid;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    align-items: center;
+    h1 {
+      font-size: 40px;
+    }
+    button {
+      height: 30px;
+      padding: 0 20px;
+      color: teal;
+      border: transparent;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .banner {
+    display: flex;
+    background-color: teal;
+    justify-content: space-between;
+    align-items: center;
+    // width: 80%;
+    margin: 60px auto;
+    border-radius: 10px;
+    .d1 {
+      margin-left: 20px;
+      padding: 10px;
+
+      h2 {
+        font-weight: 100;
+      }
+      h1 {
+        font-weight: 400;
+        color: white;
+      }
+      p {
+        color: #767676;
+      }
+
+      .book_now {
+        padding: 10px 40px;
+        color: teal;
+        border: none;
+        background: rgb(234, 158, 7);
+
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        // box-shadow: 0 0 20px #eee;
+        display: block;
+        border: none;
+      }
+      .book_now:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    img {
+      float: right;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  .testimonial {
+    h2 {
+      color: teal;
+      text-align: center;
+    }
+    h1 {
+      font-size: 50px;
+      text-align: center;
+      font-weight: 600;
+      font-family: "Times New Roman", Times, serif;
+      letter-spacing: 5px;
+    }
+    .slider {
+      margin-top: 30px;
+     
+    }
+  }
+  .reachout {
+    width: 60%;
+    margin: 60px auto 20px auto;
+    background-color: rgb(245, 245, 245);
+    h1 {
+      text-align: center;
+      padding: 20px 0;
+      font-weight: 500;
+    }
+    .form {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      .childdd {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        gap: 20px 10px;
+        align-items: center;
+        select {
+          padding: 12px;
+          border: transparent;
+          color: rgb(210, 206, 206);
+        }
+
+        input {
+          padding: 12px;
+          border: transparent;
+        }
+        input::placeholder {
+          color: rgb(202, 198, 198);
+        }
+      }
+      .childdd2 {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        input {
+          padding: 12px;
+          border: transparent;
+          margin-top: 15px;
+          color: rgb(202, 198, 198);
+        }
+        input::placeholder {
+          color: rgb(202, 198, 198);
+        }
+      }
+      .form-btn {
+        padding: 15px 40px;
+        display: block;
+        width: 25%;
+        margin: 50px auto 20px;
+        background-color: teal;
+        color: white;
+        font-weight: bold;
+        border: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}
