@@ -52,9 +52,9 @@ const CartPage = () => {
                   <Button mt={4} colorScheme="teal">
                    <Address /> 
                   </Button>
-          </div>
+          </div> 
       </div>
-     <div style={{border:"2px solid teal", marginTop:"30px",padding:"2%", color:"teal" ,fontWeight:"bold"}}>
+     <div style={{border:"2px solid teal", marginTop:"30px",padding:"2%", color:"#053f41" ,fontWeight:"bold"}}>
       <p>Free delivery with cart value above ₹999.</p>
      </div>
     </div>
