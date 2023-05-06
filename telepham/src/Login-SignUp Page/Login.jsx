@@ -4,35 +4,32 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Checkbox,
   Stack,
+  Link,
   Button,
   Heading,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-
-import {Link, useNavigate} from 'react-router-dom'
+import {auth} from "../firebase";
 import {useState} from 'react';
-import {auth} from '../firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 export default function Login() {
-    const [email, setEmail] = useState("");
+      const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate()
-    const onSingIn = () => {
+
+     const onSingIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredenditals) => {
-             setTimeout(()=>{
-           navigate('/')
-        },1000)
+            console.log("LoggedIn")
         }).catch((error)=> {
             alert(`Invalid email or password`)
         })
 
        
     }
-  return (<>
-
+  return (
     <Flex
       minH={'100vh'}
       align={'center'}
@@ -64,7 +61,7 @@ export default function Login() {
                 direction={{ base: 'column', sm: 'row' }}
                 align={'start'}
                 justify={'space-between'}>
-                <Link to='/sign-up'>+ Create new account</Link>
+                <Checkbox>Remember me</Checkbox>
                 <Link color={'blue.400'}>Forgot password?</Link>
               </Stack>
               <Button
@@ -81,6 +78,5 @@ export default function Login() {
         </Box>
       </Stack>
     </Flex>
-    </>
   );
 }
