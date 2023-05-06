@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Components/Sidebar.scss";
+import "../components/Sidebar.scss";
 
 function Sideb() {
   const [shahid, setShahid] = useState("none");
@@ -8,7 +8,6 @@ function Sideb() {
     if (shahid === "none") {
       setShahid("block");
       setShahid1("none");
-
     } else {
       setShahid("none");
     }
@@ -17,7 +16,6 @@ function Sideb() {
     if (shahid1 === "none") {
       setShahid1("block");
       setShahid("none");
-
     } else {
       setShahid1("none");
     }
@@ -25,266 +23,242 @@ function Sideb() {
   return (
     <div className="sidebar" id="sidebar">
       <h2 className="sub-heading">Product Categories</h2>
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          Handcare<span onClick={popup}>➕</span>
-        </p>
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            Handcare<span onClick={popup}>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: shahid }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-      <div className="shahid" style={{ display: shahid }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            Cosmetics<span onClick={popup2}>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: shahid1 }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-     </div>
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          Cosmetics<span onClick={popup2}>➕</span>
-        </p>
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-      <div className="shahid" style={{ display: shahid1 }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-     </div>
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
+
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
+
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-     </div>
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
+
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
+
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-     </div>
-     
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
+
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-     </div>
-     
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+          <p>
+            <label htmlFor="">shahid</label>
+            <input type="checkbox" />
+          </p>
+        </div>
       </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-      </div>
-     </div>
-     
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
-      </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-      </div>
-     </div>
-     
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
-      </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-      </div>
-     </div>
-     
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
-      </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-      </div>
-     </div>
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
-      </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-      </div>
-     </div>
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
-      </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-      </div>
-     </div>
-     
-     <div className="filtering">
-     <div className="osama">
-        <p>
-          medicines<span >➕</span>
-        </p>
-      </div>
-      <div className="shahid" style={{ display: "none" }}>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-        <p>
-          <label htmlFor="">shahid</label>
-          <input type="checkbox" />
-        </p>
-      </div>
-     </div>
-     
-     
     </div>
   );
 }

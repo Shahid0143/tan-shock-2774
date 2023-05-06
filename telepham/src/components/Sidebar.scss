@@ -29,6 +29,8 @@ border-radius: 6px;
     border: 1px solid rgb(200, 198, 198);
     border-radius: 4px;
     // position: relative;
+    font-size: 15px;
+      line-height: 0;
     span{
         cursor: pointer;
       }
@@ -41,6 +43,8 @@ border-radius: 6px;
       position: relative;
       text-align: center;
       font-weight: 700;
+      line-height: 2px;
+        letter-spacing: 0.26em;
     }
   }
   .shahid {
@@ -58,7 +62,7 @@ border-radius: 6px;
       justify-content: center;
       gap: 20px;
       align-items: center;
-      width: 100%;
+      width: 95%;
       padding: 5px;
     //   margin-top: 5px;
       // border: 1px solid rgb(200, 198, 198);

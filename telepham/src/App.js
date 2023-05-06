@@ -3,12 +3,16 @@
 import Homepage from './pages/Homepage';
 import Navbar from "./components/Navbar"
 import "./App.scss"
+import Main from "./components/Main"
+
 function App() {
   return (
     <div >
-      {/* <SignUpPage /> */}
+      
       <Navbar/>
-      <Homepage/>
+     <Main/>
+      {/* <Homepage/> */}
+      {/* <ProductList/> */}
     </div>
   );
 }

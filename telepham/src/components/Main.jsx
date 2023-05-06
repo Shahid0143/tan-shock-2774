@@ -1,7 +1,7 @@
 import React from "react";
 import Sideb from "./Sideb";
 import ProductList from "./ProductList";
-import "../Components/Main.scss";
+import "../components/Main.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Sliderr from "./Sliderr";
@@ -12,81 +12,80 @@ const Full_body_health_checkups = [
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.7"
+    rating: "4.7",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"3.2"
+    rating: "3.2",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
   {
     img: "https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=64,0,712,400",
     name: "Tony stark",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio dolores? Exercitationem quo sapiente temporibus nihil sint molestias illum eius.",
-    rating:"4.1"
+    rating: "4.1",
   },
-  
 ];
 const slider3 = {
   dots: true,
@@ -164,7 +163,6 @@ function Main() {
                 name={item.name}
                 img={item.img}
                 desc={item.desc}
-               
                 rating={item.rating}
                 key={index}
               />
