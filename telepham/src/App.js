@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar"
 import "./App.scss"
 import Main from "./components/Main"
 
+import AllRoutes from './AllRoutes';
+import SignUp from './Login-SignUp Page/SignUp';
 function App() {
   return (
     <div >
