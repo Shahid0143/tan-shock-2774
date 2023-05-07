@@ -47,7 +47,7 @@ const AdminLogin = () => {
     }
     return (
         <div>
-            <Navbar2 />
+            
 
             <Flex
                 minH={"100vh"}
@@ -114,7 +114,7 @@ const AdminLogin = () => {
                     </Box>
                 </Stack>
             </Flex>
-            <Footer2 />
+       
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../style/Navbar.scss";
 import open from "../images/open.png";
 import { useNavigate } from "react-router-dom";
-import { UnlockIcon } from "@chakra-ui/icons";
+
 
 function Navbar() {
   const [a, setA] = useState("-100%");
@@ -35,7 +35,10 @@ function Navbar() {
 
         <div className="icon">
           <span className="w">
-            <UnlockIcon />
+            <i className="fa-solid fa-user" style={{fontSize:"24px", marginLeft:"4px"}} onClick={()=> navigate("/login")}>
+              
+            </i>
+            
           </span>
           <p>🏠</p>
           <button>Consult Now</button>
