@@ -18,9 +18,11 @@ import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import {auth} from "../firebase";
 import Swal from 'sweetalert2';
+import {useNavigate} from "react-router-dom"
 import {createUserWithEmailAndPassword} from "firebase/auth"
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate()
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('')
 const [firstName, setFirstName] = useState('');
@@ -46,7 +48,9 @@ const onSignUp = async () => {
         'You have been registered!',
       'success'
         )
-        
+        setTimeout(()=>{
+          navigate("/login")
+        },1500)
             }
         })
         .catch((error)=> console.log(error))
@@ -114,13 +118,14 @@ const onSignUp = async () => {
                 color={'white'}
                 _hover={{
                   bg: 'blue.500',
-                }}>
+                }} 
+                >
                 Sign up
               </Button>
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user? <Link color={'blue.400'} onClick={()=> navigate("/login")} >Login</Link>
               </Text>
             </Stack>
           </Stack>
