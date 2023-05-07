@@ -6,13 +6,13 @@ import { getAuth } from 'firebase/auth';
 import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDbZVzYsYCG5csKUe4xQNJVv80PtHAczE8",
-    authDomain: "vastra-project.firebaseapp.com",
-    projectId: "vastra-project",
-    storageBucket: "vastra-project.appspot.com",
-    messagingSenderId: "1094038130966",
-    appId: "1:1094038130966:web:1e028ddfbec31bb68d8037",
-    url: "https://vastra-project-default-rtdb.firebaseio.com/"
+    apiKey: "AIzaSyBPZWv8MnGkdauHMyvhczIoXApUWJTuzQ0",
+    authDomain: "tele-pharma-project.firebaseapp.com",
+    projectId: "tele-pharma-project",
+    storageBucket: "tele-pharma-project.appspot.com",
+    messagingSenderId: "52720531941",
+    appId: "1:52720531941:web:7d2426582e577a6ff1970c",
+    url: "https://tele-pharma-project-default-rtdb.firebaseio.com/"
 };
 
 // Initialize Firebase

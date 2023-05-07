@@ -2,9 +2,14 @@
 
 
 
+
+import "./App.scss"
+import Main from "./components/Main"
+
 import Navbar from "./components/Navbar"
 import "./style/App.scss"
 import AllRoutes from './AllRoutes';
+
 
 function App() {
   return (
@@ -13,8 +18,7 @@ function App() {
       <Navbar/>
       <AllRoutes/>
 
-    </div>
-  );
-}
-
+ </div>
+ )
+ }
 export default App;
