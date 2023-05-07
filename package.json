@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@chakra-ui/icons": "^2.0.19",
-    "sweetalert2": "^11.7.5"
-  }
-}

@@ -205,6 +205,33 @@ function Main() {
           </form>
         </div>
       </div>
+
+      <div className="foot">
+        <div className="m1">
+          <h2>All Medicine</h2>
+          <p>Health&Care</p>
+          <p>BeautyCare</p>
+        </div>
+        <div className="m1">
+          <h2>Doctor</h2>
+          <p>Phishtherapy</p>
+          <p>Heart Specilist</p>
+        </div>
+        <div className="m1">
+          <h2>Hospital</h2>
+          <p>Government Listed</p>
+          <p>Top Private</p>
+        </div>
+        <div className="m1">
+          <h2>About Us</h2>
+          <p>Contact Us</p>
+        </div>
+      </div>
+      <div className="hh">
+        <div>
+          <h1>@Health Care 2023 All rights is reserved</h1>
+        </div>
+      </div>
     </div>
   );
 }

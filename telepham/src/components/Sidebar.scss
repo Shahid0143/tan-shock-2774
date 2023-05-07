@@ -1,19 +1,21 @@
 #sidebar.sidebar {
-//   border: 1px solid red;
+  //   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 5px 0px rgba(0,0,0,0.3);
-//   background-color: rgb(245, 245, 245);
-border-radius: 6px;
-  margin-left: 20px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
+  //   background-color: rgb(245, 245, 245);
+  border-radius: 6px;
+  // margin-left: 20px;
   margin-top: 10px;
-  .sub-heading{
+
+  .sub-heading {
     color: teal;
     text-align: center;
     padding: 20px 0;
   }
-  .filtering{
-      position: relative;
+
+  .filtering {
+    position: relative;
 
   }
 
@@ -28,12 +30,11 @@ border-radius: 6px;
     margin: 10px;
     border: 1px solid rgb(200, 198, 198);
     border-radius: 4px;
+
     // position: relative;
-    font-size: 15px;
-      line-height: 0;
-    span{
-        cursor: pointer;
-      }
+    span {
+      cursor: pointer;
+    }
 
     p {
       display: flex;
@@ -43,11 +44,9 @@ border-radius: 6px;
       position: relative;
       text-align: center;
       font-weight: 700;
-     
-        letter-spacing: 0.26em;
-        line-height: 18px;
     }
   }
+
   .shahid {
     display: "shahid";
     position: absolute;
@@ -63,19 +62,30 @@ border-radius: 6px;
       justify-content: center;
       gap: 20px;
       align-items: center;
-      width: 95%;
+      width: 100%;
       padding: 5px;
-    //   margin-top: 5px;
+      //   margin-top: 5px;
       // border: 1px solid rgb(200, 198, 198);
-    //   border-bottom: 1px solid rgb(200, 198, 198);
+      //   border-bottom: 1px solid rgb(200, 198, 198);
       border-bottom: 1px solid teal;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
-    
-      
+
+
       label {
         margin-bottom: 5px;
       }
     }
   }
+}
+
+@media screen and (max-width: 600px) {
+  #sidebar.sidebar {
+
+
+    width: 100%;
+    justify-content: center;
+
+  }
+
 }

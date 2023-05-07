@@ -1,9 +1,11 @@
 #ppage.ppage {
   margin-top: 30px;
+
   .reco {
     padding: 5px 20px;
     color: teal;
   }
+
   .heading {
     // border: 1px solid;
     margin: 10px;
@@ -11,9 +13,11 @@
     justify-content: space-between;
     padding: 5px 20px;
     align-items: center;
+
     h1 {
       font-size: 40px;
     }
+
     button {
       height: 30px;
       padding: 0 20px;
@@ -26,7 +30,9 @@
 
   .main {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 78%;
+    justify-content: center;
+    margin: auto;
   }
 
   .banner {
@@ -37,6 +43,7 @@
     // width: 80%;
     margin: 60px auto;
     border-radius: 10px;
+
     .d1 {
       margin-left: 20px;
       padding: 10px;
@@ -44,10 +51,12 @@
       h2 {
         font-weight: 100;
       }
+
       h1 {
         font-weight: 400;
         color: white;
       }
+
       p {
         color: #767676;
       }
@@ -70,22 +79,27 @@
         display: block;
         border: none;
       }
+
       .book_now:hover {
-        background-position: right center; /* change the direction of the change here */
+        background-position: right center;
+        /* change the direction of the change here */
         color: #fff;
         text-decoration: none;
       }
     }
+
     img {
       float: right;
       border-bottom-right-radius: 10px;
     }
   }
+
   .testimonial {
     h2 {
       color: teal;
       text-align: center;
     }
+
     h1 {
       font-size: 50px;
       text-align: center;
@@ -93,30 +107,35 @@
       font-family: "Times New Roman", Times, serif;
       letter-spacing: 5px;
     }
+
     .slider {
       margin-top: 30px;
-     
     }
   }
+
   .reachout {
     width: 60%;
     margin: 60px auto 20px auto;
     background-color: rgb(245, 245, 245);
+
     h1 {
       text-align: center;
       padding: 20px 0;
       font-weight: 500;
     }
+
     .form {
       width: 80%;
       margin: auto;
       display: grid;
+
       .childdd {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-content: center;
         gap: 20px 10px;
         align-items: center;
+
         select {
           padding: 12px;
           border: transparent;
@@ -126,27 +145,33 @@
         input {
           padding: 12px;
           border: transparent;
+          
         }
+
         input::placeholder {
           color: rgb(202, 198, 198);
         }
       }
+
       .childdd2 {
         display: grid;
         grid-template-columns: 33% 33% 33%;
         justify-content: center;
         gap: 10px;
         align-items: center;
+
         input {
           padding: 12px;
           border: transparent;
           margin-top: 15px;
           color: rgb(202, 198, 198);
         }
+
         input::placeholder {
           color: rgb(202, 198, 198);
         }
       }
+
       .form-btn {
         padding: 15px 40px;
         display: block;
@@ -157,7 +182,101 @@
         font-weight: bold;
         border: transparent;
         cursor: pointer;
+        font-size: 76%;
+          line-height: 0px;
+          letter-spacing: 0.155em;
+          font-weight: 700;
+          padding: 25px;
       }
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  #ppage.ppage {
+    .main {
+      grid-template-columns: 100%;
+      width: 100%;
+    }
+
+    .reachout {
+      width: 100%;
+
+      .form {
+        width: 100%;
+
+        .childdd {
+          grid-template-columns: 100%;
+
+          select {
+            width: 300px;
+            margin: auto;
+          }
+
+          input {
+            width: 300px;
+            margin: auto;
+            margin-bottom: 10px;
+          }
+        }
+
+        .childdd2 {
+          grid-template-columns: 100%;
+
+          input {
+            width: 300px;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    .banner {
+      // width: 100%;
+      flex-direction: column;
+      margin: 0 5px;
+    }
+  }
+}
+
+.foot{
+  margin-top: 10px;
+  // background-color: aqua;
+  // border: 1px solid red;
+  height: 160px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  
+  .m1{
+    // margin: auto;
+    background-color: rgb(26, 26, 26);
+    color: whitesmoke;
+    padding-top: 50px;
+    // border: 1px solid green;
+    width: auto;
+    text-align: center;
+    // height: 160px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  p{
+      font-size: 13px;
+      line-height: 22px;
+        font-weight: 300;
+      }
+
+     
+  }
+
+  .hh{
+    padding-top: 5px;
+    background-color: rgb(26, 26, 26);
+    border-top: 2px solid rgb(228, 228, 233);
+    height: 40px;
+    color: white;
+    text-align: center;
+  }
+        @media screen and (max-width: 600px){
+
+        }

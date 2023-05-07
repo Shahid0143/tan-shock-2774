@@ -1,50 +1,59 @@
-#products.products{
+#products.products {
+
     // border: 1px solid green;
     // height: 50vh;
-    .container{
+    .container {
         display: grid;
         grid-template-columns: 30% 30% 30%;
         gap: 20px;
         justify-content: center;
         padding: 10px 0;
-        .child{
+
+        .child {
             // border: 1px solid blue;
-            align-items:end;
+            align-items: end;
             // width: 300px;
             display: grid;
             text-align: center;
-            box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
             gap: 10px;
-            .childimage{
+            position: relative;
 
-                img{
-                    width: 100%;
+            .childimage {
+
+                img {
+                    width:10rem;
+                    height: 15rem;
                     padding: 10px 20px;
+                    margin: auto;
                 }
-                img:hover{
+
+                img:hover {
                     transform: scale(1.1);
                 }
             }
-            .childnamem{
-           
-                h2{
+
+            .childnamem {
+
+                h2 {
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     width: 300px;
                     margin: auto;
                 }
-              
+
             }
-            .price{
+
+            .price {
                 display: flex;
-            justify-content: center;
-            gap: 10px;
-           
+                justify-content: center;
+                gap: 10px;
+
             }
-          
-            
-            .cartbutton{
+
+
+            .cartbutton {
                 padding: 15px 20px;
                 width: 80%;
                 margin: 0 10%;
@@ -54,11 +63,36 @@
                 margin-bottom: 10px;
                 font-weight: bold;
                 cursor: pointer;
+                font-size: 91%;
+                    line-height: 8px;
+            }
+
+            .fav {
+                position: absolute;
+                right: 5px;
+                top: 0;
+                font-size: 30px;
             }
         }
     }
-    .child:hover{
-        box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
+
+    .child:hover {
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
         cursor: pointer;
     }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+    #products.products {
+        .container {
+            grid-template-columns: 100%;
+        }
+
+
+    }
+
 }
