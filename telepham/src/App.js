@@ -2,23 +2,23 @@
 
 
 
+
 import "./App.scss"
 import Main from "./components/Main"
 
+import Navbar from "./components/Navbar"
+import "./style/App.scss"
 import AllRoutes from './AllRoutes';
-import SignUp from './Login-SignUp Page/SignUp';
-import Login from './Login-SignUp Page/Login';
+
+
 function App() {
   return (
-    <div className="App">
-      <SignUp />
-      <Login />
-      {/* <Navbar/>
-     <Main/> */}
-      {/* <Homepage/> */}
-      {/* <ProductList/> */}
-    </div>
-  );
-}
+    <div >
+      
+      <Navbar/>
+      <AllRoutes/>
 
+ </div>
+ )
+ }
 export default App;

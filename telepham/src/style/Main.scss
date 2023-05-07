@@ -280,3 +280,35 @@
         @media screen and (max-width: 600px){
 
         }
+        .search{
+          // border: 1px solid red;
+          width: 20%;
+          margin-left: 60rem;
+          margin-top: 5rem;
+          
+          input{
+            padding: 0.2rem;
+            border: 0.5px solid teal;
+            border-radius: 7px;
+            &:hover{
+              background-color: rgb(247, 242, 242);
+             
+            }
+            &:focus{
+              background-color: rgb(221, 243, 247);
+              outline: none;
+            }
+          }
+                    .l {
+                     
+                      margin-left: 15.2rem;
+          
+                      height: 30px;
+                      width: 21px;
+                      // border: 1px solid red;
+                      padding-top: -60px;
+                      position: sticky;
+                    }
+          
+        }
+              

@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/Slider.scss";
+import "../style/Slider.scss";
 
 function Sliderr({ name, desc, rating, img }) {
   return (
