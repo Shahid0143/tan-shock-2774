@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { AuthContext } from "../context/AuthContext";
 import Swal from "sweetalert2";
+import { UnlockIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -15,6 +16,13 @@ import {
   Spacer,
   Text,
   Circle,
+  Img,
+  MenuButton,
+  Avatar,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  Menu,
 } from "@chakra-ui/react";
 function Navbar() {
   const [a, setA] = useState("-100%");
@@ -90,35 +98,53 @@ function Navbar() {
         </ul>
 
         <div className="icon">
-          <span className="w">
+          <div className="w">
             {authUser ? (
-              <Box
-                display="flex"
-                gap="10px"
-                alignItems={"center"}
-                justifyContent={"center"}
-              >
-                <Circle size="40px" bg="black" color="white">
-                  <Text fontSize={"20px"} fontWeight={"600"}>
-                    {userName}
-                  </Text>
-                </Circle>
-                <Button onClick={logOut} colorScheme="red">
-                  Log Out
-                </Button>{" "}
-              </Box>
+              // <Box
+              //   display="flex"
+              //   gap="10px"
+              //   alignItems={"center"}
+              //   justifyContent={"center"}
+              // >
+              //   <Circle size="40px" bg="black" color="white">
+              //     <Text fontSize={"20px"} fontWeight={"600"}>
+              //       {userName}
+              //     </Text>
+              //   </Circle>
+              //   <Button onClick={logOut} colorScheme="red">
+              //     Log Out
+              //   </Button>{" "}
+              // </Box>
+              <Menu border="none">
+                <MenuButton
+                  className="ck"
+                  as={Button}
+                  rounded={"full"}
+                  variant={"link"}
+                  cursor={"pointer"}
+                  minW={0}
+                >
+                  <Circle size="40px" bg="teal" color="white">
+                    <Text fontSize={"20px"} fontWeight={"600"}>
+                      {userName}
+                    </Text>
+                  </Circle>
+                </MenuButton>
+                <MenuList style={{ color: "black" }}>
+                  <MenuItem>Profile</MenuItem>
+                  <MenuItem>Setting</MenuItem>
+                  <MenuDivider />
+                  <MenuItem onClick={logOut}>Logout</MenuItem>
+                </MenuList>
+              </Menu>
             ) : (
-              <i
-                className="fa-solid fa-user"
-                style={{ fontSize: "24px", marginLeft: "4px" }}
-                onClick={() => navigate("/login")}
-              ></i>
+              <span>
+                <UnlockIcon onClick={() => navigate("/login")} />
+              </span>
             )}
-          </span>
-          <Link to={"/cart"}>
-            <p>🏠</p>
-          </Link>
-          <button>Consult Now</button>
+          </div>
+          <p>🏠</p>
+          <button onClick={consult}>Consult Now</button>
         </div>
         <div onClick={closePopup} className="close">
           <button>❌</button>

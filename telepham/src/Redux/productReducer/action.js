@@ -5,7 +5,7 @@ export const getproduct =(obj,page,setcount)=>(dispatch)=>{
     
   // Write logic here
   dispatch({type:GET_PRODUCT_REQUEST})
-     return axios.get(`http://localhost:8080/products?_limit=6&_page=${page}`,obj).then((res)=>{
+     return axios.get(`https://shy-puce-binturong-ring.cyclic.app/products?_limit=6&_page=${page}`,obj).then((res)=>{
     //  console.log(res)
      setcount(res)
     dispatch({type:GET_PRODUCT_SUCCESS,payload:res.data})

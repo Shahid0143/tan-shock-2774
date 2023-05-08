@@ -54,12 +54,22 @@
     gap: 10px;
 
     button {
-      padding: 14px 20px;
-      background-color: teal;
-      color: white;
+      padding: 14px 5px;
+      // background-color: teal;
+      color: teal;
       border: transparent;
       font-weight: bold;
       cursor: pointer;
+      font-size: 92%;
+        line-height: 15px;
+        font-weight: 900;
+         &:hover{
+         color: rgb(203, 105, 19);
+         
+        }
+       
+       
+      
     }
     // .w{
     //   border: 1px solid teal;
