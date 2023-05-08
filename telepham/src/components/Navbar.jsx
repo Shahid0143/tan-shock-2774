@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import "../style/Navbar.scss";
 import { auth } from "../firebase";
 import open from "../images/open.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { AuthContext } from "../context/AuthContext";
 import Swal from "sweetalert2";
@@ -115,8 +115,10 @@ function Navbar() {
               ></i>
             )}
           </span>
-          <p>🏠</p>
-          <button onClick={consult}>Consult Now</button>
+          <Link to={"/cart"}>
+            <p>🏠</p>
+          </Link>
+          <button>Consult Now</button>
         </div>
         <div onClick={closePopup} className="close">
           <button>❌</button>
