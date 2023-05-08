@@ -1,9 +1,11 @@
 #home{
-    padding-top: 20px;
+     padding-top: 150px;
+    // margin-top: 200px;
     background-color: rgb(252, 247, 237);
 //   border: 2px solid green;
    height: 627px;
    display: flex;
+   
 
    h2{
     font-weight: 400;
@@ -14,20 +16,21 @@
     
     }
    .s1{
-    //  border: 1px solid black;
+    // border: 1px solid black;
     width: 50%;
     margin-left:30px;
     
    }
    h4{
     font-size: 32px;
-        line-height: 0;
+        line-height: 2;
         letter-spacing: 0.059em;
         font-weight: 500;
         font-size: 22px;
         margin-left: 25px;
    }
    button{
+    margin-top: 25px;
     font-size: 22px;
         line-height: 1.7;
         letter-spacing: -0.007em;
@@ -37,10 +40,14 @@
         border: 1px solid teal;
         border-radius: 5px;
         color: teal;
+        padding: 3px;
    }
    img{
-    width:160%;
-   margin-top: 60px;
+    // border: 1px solid black;
+    height: 29.6rem;
+    object-fit: cover;
+    
+   
    }
    
 }
@@ -53,12 +60,12 @@
     padding-top: 30px;
     h4{
         font-size: 22px;
-            line-height: 0;
+            line-height: 1.1;
             letter-spacing: -0.015em;
     }
     h1{
         font-size: 37px;
-            line-height: 0.8;
+            line-height: 1.5;
             font-weight: 600;
             font-style: normal;
             font-size: 52px;
@@ -79,22 +86,34 @@
     }
   #c1{
     margin-top: 50px;
-    // border: 1px solid red;
+    //  border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
+    margin-left: 29px;
+   
     
     .pic{
-        border: 1px solid transparent;
-        width: auto;
+        // border: 1px solid rgb(43, 0, 255);
+        width: 90%;
         height: 180px;
         text-align: center;
         padding-top: 9px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
     }
+    img{
+        margin-left: 10rem;
+    }
+    // .ss{
+    //     margin-left: 11rem;
+        
+    // }
     p{
         font-size: 18px;
-            line-height: 0;
+            
+            line-height: 2;
+                letter-spacing: 0.055em;
     }
   }
 
@@ -112,6 +131,10 @@
         width:auto;
         text-align: center;
         padding-top: 20px;
+        font-size: 72px;
+            line-height: 108px;
+           
+            font-weight: 400;
     }
     p{
         line-height: 0;

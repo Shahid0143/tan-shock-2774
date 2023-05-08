@@ -1,66 +1,24 @@
 import React, { useEffect } from "react";
-import "../components/Product.scss";
+import "../style/Product.scss";
 import { getproduct } from "../Redux/productReducer/action";
 import { useDispatch, useSelector } from "react-redux";
-const maindata = [
-  {
-    img: "https://static.vecteezy.com/system/resources/previews/000/297/920/original/vector-set-of-various-medicines.jpg",
-    name: "Comprehensive Gold Full Body Checkup",
-    desc: "Includes 78 Tests",
-    rating: "4.9",
-    o_price: 3500,
-    price: 2099,
-  },
-  {
-    img: "https://static.vecteezy.com/system/resources/previews/000/297/920/original/vector-set-of-various-medicines.jpg",
-    name: "Comprehensive Gold Full Body Checkup",
-    desc: "Includes 78 Tests",
-    rating: "4.9",
-    o_price: 3500,
-    price: 2099,
-  },
-  {
-    img: "https://static.vecteezy.com/system/resources/previews/000/297/920/original/vector-set-of-various-medicines.jpg",
-    name: "Comprehensive Gold Full Body Checkup",
-    desc: "Includes 78 Tests",
-    rating: "4.9",
-    o_price: 3500,
-    price: 2099,
-  },
-  {
-    img: "https://static.vecteezy.com/system/resources/previews/000/297/920/original/vector-set-of-various-medicines.jpg",
-    name: "Comprehensive Gold Full Body Checkup",
-    desc: "Includes 78 Tests",
-    rating: "4.9",
-    o_price: 3500,
-    price: 2099,
-  },
-  {
-    img: "https://static.vecteezy.com/system/resources/previews/000/297/920/original/vector-set-of-various-medicines.jpg",
-    name: "Comprehensive Gold Full Body Checkup",
-    desc: "Includes 78 Tests",
-    rating: "4.9",
-    o_price: 3500,
-    price: 2099,
-  },
-  {
-    img: "https://static.vecteezy.com/system/resources/previews/000/297/920/original/vector-set-of-various-medicines.jpg",
-    name: "Comprehensive Gold Full Body Checkup",
-    desc: "Includes 78 Tests",
-    rating: "4.9",
-    o_price: 3500,
-    price: 2099,
-  },
-];
-
+import { useLocation, useSearchParams } from "react-router-dom";
 function ProductList() {
   const dispatch = useDispatch();
+
   const product = useSelector((store) => store.ProductReducer.products);
   // console.log(product);
-
+  const Location = useLocation();
+  const [seaechParams] = useSearchParams();
+  let obj = {
+    params: {
+      _sort: seaechParams.get("order") && "price",
+      _order: seaechParams.get("order"),
+    },
+  };
   useEffect(() => {
-    dispatch(getproduct());
-  }, []);
+    dispatch(getproduct(obj));
+  }, [Location.search]);
 
   return (
     <div className="products" id="products">

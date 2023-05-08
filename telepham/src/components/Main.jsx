@@ -1,11 +1,12 @@
 import React from "react";
 import Sideb from "./Sideb";
 import ProductList from "./ProductList";
-import "../components/Main.scss";
+import "../style/Main.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Sliderr from "./Sliderr";
 import Slider from "react-slick";
+import { SearchIcon } from "@chakra-ui/icons";
 
 const Full_body_health_checkups = [
   {
@@ -127,6 +128,13 @@ function Main() {
   return (
     <div className="ppage" id="ppage">
       <div className="top">
+        <div className="search">
+          <label htmlFor="">Search : </label>
+          <input type="text" placeholder="search for products" />
+          <span className="l">
+            <SearchIcon style={{ marginTop: "-60px" }} />
+          </span>
+        </div>
         <h3 className="reco">Most recommended</h3>
         <div className="heading">
           <h1>Products</h1>

@@ -1,5 +1,6 @@
 #sidebar.sidebar {
   //   border: 1px solid red;
+  height: 50rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
@@ -12,6 +13,9 @@
     color: teal;
     text-align: center;
     padding: 20px 0;
+    font-size: 27px;
+      line-height: 25px;
+      letter-spacing: 0.044em
   }
 
   .filtering {
@@ -88,4 +92,15 @@
 
   }
 
+}
+ .sort {
+   display: grid;
+   margin-left: 4rem;
+   label{
+    color: rgb(230, 157, 21);
+   }
+ }
+.sd{
+  font-size: 17px;
+    line-height: 38px;
 }

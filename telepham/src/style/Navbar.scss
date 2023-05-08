@@ -1,4 +1,6 @@
 #nav.nav {
+  -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
   height: 60px;
   box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
   display: grid;
@@ -6,7 +8,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  position: relative;
+  // position: relative;
+  position: fixed;
+  width: 100%;
+  top:0;
+  z-index: 1;
 
   .logo {
     font-weight: 800;
@@ -55,6 +61,12 @@
       font-weight: bold;
       cursor: pointer;
     }
+    // .w{
+    //   border: 1px solid teal;
+    //   height: 2.7rem;
+    //   width:1.3rem;
+      
+    // }
 
     p {
       border: 1px solid rgb(224, 224, 224);
