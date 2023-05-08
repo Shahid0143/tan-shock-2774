@@ -13,7 +13,7 @@ const ManageUsers = () => {
 
   const handleDelete = (user) => {
     try {
-      // dispatch(deleteUser(user.userId?user.userId:user.id));
+     
       toast({
         title: 'User Deleted',
         description: `${user.username?user.username:user.name} has been deleted successfully`,
