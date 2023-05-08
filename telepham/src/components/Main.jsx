@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Sliderr from "./Sliderr";
 import Slider from "react-slick";
 import { SearchIcon } from "@chakra-ui/icons";
+import Footer from "./Footer";
 
 const Full_body_health_checkups = [
   {
@@ -126,121 +127,97 @@ const slider3 = {
 
 function Main() {
   return (
-    <div className="ppage" id="ppage">
-      <div className="top">
-        <div className="search">
-          <label htmlFor="">Search : </label>
-          <input type="text" placeholder="search for products" />
-          <span className="l">
-            <SearchIcon style={{ marginTop: "-60px" }} />
-          </span>
+    <>
+      <div className="ppage" id="ppage">
+        <div className="top">
+          <div className="search">
+            <label htmlFor="">Search : </label>
+            <input type="text" placeholder="search for products" />
+            <span className="l">
+              <SearchIcon style={{ marginTop: "-60px" }} />
+            </span>
+          </div>
+          <h3 className="reco">Most recommended</h3>
+          <div className="heading">
+            <h1>Products</h1>
+            <button>View All</button>
+          </div>
         </div>
-        <h3 className="reco">Most recommended</h3>
-        <div className="heading">
-          <h1>Products</h1>
-          <button>View All</button>
-        </div>
-      </div>
 
-      <div className="main">
-        <Sideb />
-        <ProductList />
-      </div>
-      <div className="banner">
-        <div className="d1">
-          <h1>Avail a free consultation and start</h1>
-          <h1>your healtcare journey today</h1>
-          <button className="book_now">REGISTER NOW</button>
+        <div className="main">
+          <Sideb />
+          <ProductList />
         </div>
-        <div>
-          <img
-            width="100%"
-            src="https://marketing-compaigns.s3.ap-south-1.amazonaws.com/emailer/Corona_landing_page/consult-doc.png"
-            alt=""
-          />
+        <div className="banner">
+          <div className="d1">
+            <h1>Avail a free consultation and start</h1>
+            <h1>your healtcare journey today</h1>
+            <button className="book_now">REGISTER NOW</button>
+          </div>
+          <div>
+            <img
+              width="100%"
+              src="https://marketing-compaigns.s3.ap-south-1.amazonaws.com/emailer/Corona_landing_page/consult-doc.png"
+              alt=""
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="testimonial">
-        <h2>Hear from our patients</h2>
-        <h1>Testimonials & Stories</h1>
-        <div className="slider">
-          <Slider {...slider3}>
-            {Full_body_health_checkups.map((item, index) => (
-              <Sliderr
-                name={item.name}
-                img={item.img}
-                desc={item.desc}
-                rating={item.rating}
-                key={index}
-              />
-            ))}
-          </Slider>
+        <div className="testimonial">
+          <h2>Hear from our patients</h2>
+          <h1>Testimonials & Stories</h1>
+          <div className="slider">
+            <Slider {...slider3}>
+              {Full_body_health_checkups.map((item, index) => (
+                <Sliderr
+                  name={item.name}
+                  img={item.img}
+                  desc={item.desc}
+                  rating={item.rating}
+                  key={index}
+                />
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
 
-      <div className="reachout">
-        <h1>Meet with Our expert online</h1>
-        <div className="form">
-          <form action="">
-            <div className="childdd">
-              <select name="" id="">
-                <option value="">Choose Department</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-              </select>
-              <select name="" id="">
-                <option value="">Choose Specialist</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-              </select>
-              <input type="text" name="" id="" placeholder="Your Name" />
-              <input
-                type="email"
-                name=""
-                id=""
-                placeholder="Your Email Address"
-              />
-            </div>
-            <div className="childdd2">
-              <input type="phone" name="" id="" placeholder="Your Phone" />
-              <input type="date" name="" id="" placeholder="Select Date" />
-              <input type="time" name="" id="" placeholder="Select Time" />
-            </div>
-            <button className="form-btn">Submit</button>
-          </form>
+        <div className="reachout">
+          <h1>Meet with Our expert online</h1>
+          <div className="form">
+            <form action="">
+              <div className="childdd">
+                <select name="" id="">
+                  <option value="">Choose Department</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+                <select name="" id="">
+                  <option value="">Choose Specialist</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+                <input type="text" name="" id="" placeholder="Your Name" />
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Your Email Address"
+                />
+              </div>
+              <div className="childdd2">
+                <input type="phone" name="" id="" placeholder="Your Phone" />
+                <input type="date" name="" id="" placeholder="Select Date" />
+                <input type="time" name="" id="" placeholder="Select Time" />
+              </div>
+              <button className="form-btn">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
-
-      <div className="foot">
-        <div className="m1">
-          <h2>All Medicine</h2>
-          <p>Health&Care</p>
-          <p>BeautyCare</p>
-        </div>
-        <div className="m1">
-          <h2>Doctor</h2>
-          <p>Phishtherapy</p>
-          <p>Heart Specilist</p>
-        </div>
-        <div className="m1">
-          <h2>Hospital</h2>
-          <p>Government Listed</p>
-          <p>Top Private</p>
-        </div>
-        <div className="m1">
-          <h2>About Us</h2>
-          <p>Contact Us</p>
-        </div>
-      </div>
-      <div className="hh">
-        <div>
-          <h1>@Health Care 2023 All rights is reserved</h1>
-        </div>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

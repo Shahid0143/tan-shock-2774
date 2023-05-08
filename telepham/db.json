@@ -7,7 +7,10 @@
     "name": "True Elements Muesli No Added Sugar",
     "rating": "3.3",
     "o_price": 3007,
-    "price": 3160
+    "price": 3160,
+    "cat":"men"
+     
+
  },
  {
     "id":2,
@@ -15,7 +18,8 @@
     "name": "Tata 1mg Multivitamin Gummies with Zinc, Magnesium and Folic",
     "rating": "3.3",
     "o_price": 2027,
-    "price": 2949
+    "price": 2949,
+     "cat":"women"
  },
  
  {
@@ -23,8 +27,9 @@
     "img": "https://onemg.gumlet.io/images/f_auto,h_150,q_auto,c_fit,w_150/74c54a4f-d22f-4e33-b5af-6f95d21a577d/pure-nutrition-multivitamin-for-women-1500mg-veg-tablet.jpeg",
     "name": "TrueBasics Multivit Women Tablet",
     "rating": "3.3",
-    "o_price": 3207,
-    "price": 3149
+    "o_price": 2107,
+    "price": 3149,
+    "cat":"kid"
  },
  {
     "id":4,
@@ -32,166 +37,189 @@
     "name": "Carbamide Forte Multivitamins for Women with Probiotics Vegetarian",
     "rating": "2.7",
     "o_price": 4207,
-    "price": 6149
+    "price": 6149,
+    "cat":"kid"
  },
  {
     "id":5,
     "img": "https://onemg.gumlet.io/images/f_auto,h_150,q_auto,c_fit,w_150/kyc04z3rqzsy0o3xjkhb/zingavita-multivitamin-sports-tablet.jpg",
     "name": "Zingavita Multivitamin Sports Tablet",
-    "rating": "3.4",
+    "rating": "2.7",
     "o_price": 1207,
-    "price": 2349
+    "price": 2349,
+    "cat":"kid"
  },
  {
     "id":6,
     "img": "https://onemg.gumlet.io/images/f_auto,h_150,q_auto,c_fit,w_150/e5338574e0fd4a8e80776c4684a7cf6f/pure-nutrition-multivitamin-for-women-1500mg-veg-tablet.jpg",
     "name": "Pure Nutrition Multivitamin for Women 1500mg Veg Tablet",
-    "rating": "2.3",
-    "o_price": 3407,
-    "price": 2449
+    "rating": "2.7",
+    "o_price": 1207,
+    "price": 2449,
+    "cat":"kid"
  },
  {
    
     "id":7,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/63f943c41e0c4e6593393538e5808630/protinex-diabetes-care-vanilla.jpg",
     "name": "Protinex Diabetes Care Vanilla",
-    "rating": "3.2",
-    "o_price": 3347,
-    "price": 2179
+    "rating": "4",
+    "o_price": 1147,
+    "price": 2179,
+     "cat":"men"
  },
  {
    
     "id":8,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/cropped/h89rmrkucsmvt6i6nado/d-protin-powder-chocolate.jpg",
     "name": "Protinex Diabetes Care Vanilla",
-    "rating": "2.4",
-    "o_price": 3537,
-    "price": 2439
+    "rating": "4",
+    "o_price": 1337,
+    "price": 2439,
+     "cat":"men"
  },
  {
    
     "id":9,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/k9gy1vxxtslm7yusqnqg/jiva-chyawanprash-sugar-free.jpg",
     "name": "Jiva Chyawanprash Sugar Free",
-    "rating": "4.2",
-    "o_price": 3647,
-    "price": 2739
+    "rating": "4",
+    "o_price": 2147,
+    "price": 2739,
+     "cat":"men"
  },
  {
    
     "id":10,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/12325d1ef6a6489abcda611eb932e5d0/dabur-chyawanprakash-sugarfree.jpg",
     "name": "Dabur Chyawanprakash Sugarfree",
-    "rating": "5.2",
+    "rating": "2.7",
     "o_price": 1000,
-    "price": 3000
+    "price": 3000,
+     "cat":"women"
  },
  {
    
     "id":11,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/cropped/jzaeyrchru0detpjxifp/himalaya-diabecon-ds-tablet.jpg",
     "name": "Himalaya Diabecon DS Tablet",
-    "rating": "3.9",
+    "rating": "2.7",
     "o_price": 1390,
-    "price": 3730
+    "price": 3730,
+      "cat":"women"
  },
  {
     "id":12,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/o2d7ewgqnc2rkijeqy4m/jiva-arjuna-tablet.jpg",
     "name": "Jiva Arjuna Tablet",
-    "rating": "4.5",
+    "rating": "4",
     "o_price": 1230,
-    "price": 3730
+    "price": 3730,
+     "cat":"women"
  },
  {
    
     "id":13,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/gsra2x1zgyshvd7m31im/zandu-pancharishta-ayurvedic-digestive-tonic-suitable-for-diabetics.jpg",
     "name": "Zandu Pancharishta Ayurvedic Digestive Tonic Suitable for",
-    "rating": "3.4",
+    "rating": "4",
     "o_price": 2365,
-    "price": 2653
+    "price": 2653,
+    "cat":"kid"
+
  },
  {
    
     "id":14,
     "img": "https://onemg.gumlet.io/images/w_150,c_fit,q_auto,h_150,f_auto/mrqm83ag4gzuvxbphena/ensure-diabetes-care-vanilla-delight-powder.jpg",
     "name": "Ensure Diabetes Care Vanilla Delight Powder",
-    "rating": "4.2",
+    "rating": "4",
     "o_price": 1430,
-    "price": 3770
+    "price": 3770,
+    "cat":"kid"
  },
  {
    
     "id":15,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/w6b53anuxkm01myxy4aa/mcaffeine-naked-raw-coffee-body-scrub.jpg",
     "name": "mCaffeine Naked & Raw Coffee Body Scrub",
-    "rating": "4.3",
+    "rating": "2.7",
     "o_price": 8765,
-    "price": 9985
+    "price": 9985,
+    "cat":"women"
+
  },
  {
    
     "id":16,
     "img": "https://onemg.gumlet.io/images/w_150,h_150,c_fit,q_auto,f_auto/b7kf9x8oa9s8bzmgmaig/saffola-immuniveda-chyawanprash-avaleha-immunity-booster.jpg",
     "name": "Saffola Immuniveda Chyawanprash Avaleha Immunity Booster",
-    "rating": "4.2",
+    "rating": "3.3",
     "o_price": 3655,
-    "price": 4746
+    "price": 4746,
+    "cat":"women"
  },
  {
    
     "id":17,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/f1927fe8c03c40269ba9aa8f4af059c6/velicia-cardio-tablet.jpg",
     "name": "Velicia Cardio Tablet",
-    "rating": "4.5",
+    "rating": "3.3",
     "o_price": 2000,
-    "price": 3350
+    "price": 3350,
+    "cat":"women"
  },
  {
    
     "id":18,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/cropped/iv4jsizzw1j63e5tabsk/pushpveda-weight-loss-capsules.png",
     "name": "Pushpveda Weight Loss Capsules",
-    "rating": "3.4",
+    "rating": "3.3",
     "o_price": 2400,
-    "price": 2435
+    "price": 2435,
+    "cat":"men"
+
  },
  {
    
     "id":19,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/qg0mvuteu4ynwijkhsw5/ignitor-ashwagandha-500mg-capsule.jpg",
     "name": "Ignitor Ashwagandha 500mg Capsule",
-    "rating": "3.4",
+    "rating": "4",
     "o_price": 2000,
-    "price": 3200
+    "price": 3200,
+    "cat":"men"
  },
  {
    
     "id":20,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/f0e11ff135e24701aea4214ab2e14ccc/dr.-patkar-s-lakadong-haldi-powder.jpg",
     "name": "Dr. Patkar's Lakadong Haldi Powder",
-    "rating": "2.2",
+    "rating": "2.7",
     "o_price": 2600,
-    "price": 2700
+    "price": 2700,
+    "cat":"men"
  },
  {
    
     "id":21,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/cropped/yjv3pe1zdc9mi1sbziri/first-bud-organics-premium-darjeeling-oolong-classic-green-tea.png",
     "name": "Potenca International Green Tea Leaves",
-    "rating": "2.5",
+    "rating": "2.7",
     "o_price": 4300,
-    "price": 4400
+    "price": 4400,
+    "cat":"men"
  },
  {
    
     "id":22,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/cropped/e8v32yic5odz0utl7vry/tjori-natural-blush-almond-meal-facial-scrub.jpg",
     "name": "Tjori Natural Blush Almond Meal Facial Scrub",
-    "rating": "2.7",
+    "rating": "4",
     "o_price":2600,
-    "price": 2900
+    "price": 2900,
+    "cat":"women"
+
  },
 
 {
@@ -199,9 +227,31 @@
     "id":23,
     "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/jozxpcicvvlzl5vciwil/evum-dark-chocolate-cookie.jpg",
     "name": "Evum Dark Chocolate Cookie",
-    "rating": "2.6",
+    "rating": "3.3",
     "o_price": 3400,
-    "price": 3700
-}
+    "price": 3700,
+    "cat":"women"
+},
+{
+   
+    "id":24,
+    "img": "https://onemg.gumlet.io/images/c_fit,h_150,w_150,q_auto,f_auto/c7cfb5daba714987a98e0585ddc579b9/nutrabay-l-arginine-capsule.jpg",
+    "name": "Nutrabay L-Arginine Capsule",
+    "rating": "4",
+    "o_price": 3247,
+    "price": 4139,
+    "cat":"women"
+ },
+ {
+   
+    "id":25,
+    "img": "https://onemg.gumlet.io/images/c_fit,h_150,w_150,q_auto,f_auto/5a34b45b7f284dd5ae17710100f5b0fa/power-gummies-hair-nail-gummies-with-biotin-for-healthy-nails-hair-growth.jpg",
+    "name": "Power Gummies - Hair & Nail Gummies with Biotin for Healthy",
+    "rating": "4",
+    "o_price": 3447,
+    "price": 4739,
+    "cat":"kid"
+ }
+ 
 ]
 }
