@@ -1,18 +1,66 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "../style/Navbar.scss";
+import {auth} from '../firebase';
 import open from "../images/open.png";
 import { useNavigate } from "react-router-dom";
-
-
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { AuthContext } from "../context/AuthContext";
+import Swal from 'sweetalert2'
+import {Box, Button, Flex, Image, Input, Spacer, Text, Circle} from '@chakra-ui/react'
 function Navbar() {
   const [a, setA] = useState("-100%");
   const navigate = useNavigate();
+  const {isAuth, setIsAuth} = useContext(AuthContext)
+     const [userNameFirstLetter, setUserNameFirstLetter] = useState('')
+     const userName = userNameFirstLetter.toUpperCase()
+        const [authUser, setAuthUser] = useState(null);
   const openpopup = () => {
     setA("0");
   };
   const closePopup = () => {
     setA("-100%");
   };
+
+useEffect(()=> {
+        const listen = onAuthStateChanged(auth, (user)=> {
+            if(user){
+              console.log(user)
+                setUserNameFirstLetter(user.email[0])
+                setAuthUser(user)
+                setIsAuth(true)
+            }else{
+                setAuthUser(null)
+            }
+        })
+        return () => {
+            listen()
+        }
+    },[])
+
+    const logOut = () => {
+         Swal.fire({
+             title: 'Are you sure?',
+             text: "You want to log out!",
+             icon: 'warning',
+            showCancelButton: true,
+             confirmButtonColor: '#3085d6',
+             cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, log out!'
+            }).then((result) => {
+        if (result.isConfirmed) {
+            signOut(auth).then(()=> {
+            setAuthUser(null)
+            setIsAuth(false) 
+            Swal.fire(
+                'Logged Out!',
+                 'You have been logged out!',
+                     'success'
+                )
+        })
+     }
+  
+    })
+  } 
 
   return (
     <div className="nav" id="nav">
@@ -35,9 +83,10 @@ function Navbar() {
 
         <div className="icon">
           <span className="w">
-            <i className="fa-solid fa-user" style={{fontSize:"24px", marginLeft:"4px"}} onClick={()=> navigate("/login")}>
-              
-            </i>
+           {authUser? <Box display="flex" gap="10px" alignItems={"center"} justifyContent={'center'}> <Circle size='40px' bg='black' color='white' ><Text fontSize={"20px"} fontWeight={"600"}>{userName}</Text></Circle><Button onClick={logOut} colorScheme='red'>Log Out</Button> </Box> :  <i className="fa-solid fa-user" style={{fontSize:"24px", marginLeft:"4px"}} onClick={()=> navigate("/login")}>
+    
+          </i>
+          }
             
           </span>
           <p>🏠</p>
