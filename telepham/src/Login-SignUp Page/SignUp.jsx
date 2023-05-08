@@ -49,7 +49,7 @@ const onSignUp = async () => {
       'success'
         )
         setTimeout(()=>{
-          navigate("/login")
+          navigate("/")
         },1500)
             }
         })

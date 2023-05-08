@@ -23,7 +23,10 @@ const navigate  = useNavigate()
      const onSingIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredenditals) => {
-           console.log(userCredenditals)
+              setTimeout(()=>{
+           navigate('/')
+        },1000)
+           
         }).catch((error)=> {
             alert(`Invalid email or password`)
         })
