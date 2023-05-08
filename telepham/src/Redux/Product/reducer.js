@@ -1,4 +1,4 @@
-import { GET_SINGLEPRODUCT_ERROR, GET_SINGLEPRODUCT_LOADING, GET_SINGLEPRODUCT_SUCCESS } from "./actionTypes"
+import { GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, GET_SINGLEPRODUCT_ERROR, GET_SINGLEPRODUCT_LOADING, GET_SINGLEPRODUCT_SUCCESS } from "./actionTypes"
 
 const initState = {
     isLoading: true,
@@ -9,8 +9,9 @@ const initState = {
 
 export const reducer = (state = initState, {type,payload}) => {
     switch(type){
+  
         case GET_SINGLEPRODUCT_LOADING: {
-            return{
+             return{
                 ...state,
                 isLoading: true,
                 isError: false,
@@ -33,6 +34,7 @@ export const reducer = (state = initState, {type,payload}) => {
               isError: true,
             };
           }
+          
           default:
             return state;
     }

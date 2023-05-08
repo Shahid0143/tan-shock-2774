@@ -1,15 +1,14 @@
-import { ADDTOCART, CARTPRICE, CLEAR_CART, PAYMENT_SUCCESS, REMOVEFROMCART } from "./actionType";
+import { ADDTOCART,  CARTPRICE,  CLEAR_CART, PAYMENT_SUCCESS, REMOVEFROMCART } from "./actionType";
 
 const initState = {
     cart: [],
     subTotal: 0,
     discountTotal: 0,
-    paymentDetails: null,
-  paymentSuccess: false,
   };
 
   export const reducer = (state = initState, { type, payload }) => {
     switch (type) {
+   
       case ADDTOCART: {
         return {
           ...state,
@@ -36,11 +35,12 @@ const initState = {
           paymentSuccess: true,
         };
       }
-      case CLEAR_CART:
+      case CLEAR_CART:{
         return {
           ...state,
           cart: [],
         };
+      }
       default: {
         return state;
       }

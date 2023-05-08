@@ -1,23 +1,42 @@
 import cartStyle from "./Cartstyle.module.css";
 import { Button } from "@chakra-ui/react";
 import Address from "./Address"
+import { useSelector } from "react-redux";
+
+import CartBox from "./CartBox";
 
 const CartPage = () => {
+ let { cart, subtotal, discountTotal } = useSelector((store)=>store.cartReducer)
+  
+  if (cart) {
+    for (let i = 0; i < cart.length; i++) {
+      subtotal += cart[i].o_price;
+      discountTotal += cart[i].price;
+    }  
+  }
+
+  if(cart.length===0){
+    subtotal=0;
+    discountTotal=0;
+}
+
   return (
     <div className={cartStyle.main}>
     <br></br>
     <br></br>
     <br></br>
     <div className={cartStyle.left}>
+      
       <div className={cartStyle.leftTop}>
         <span>
-          <h1> Item in your Cart</h1>
+          <h1>{cart.length} Item in your Cart</h1>
         </span>
       </div>
-      <div className={cartStyle.leftTop}>
-        <span>
-          <h1>Add Item</h1>
-        </span>
+      
+      <div >
+        {cart.map((elem)=>{
+          return <CartBox key={elem.id} elem={elem}/>
+        })}
       </div>
     </div>
     <div className={cartStyle.right}>
@@ -28,22 +47,22 @@ const CartPage = () => {
         <div className={cartStyle.rightBottomCartTotal}>
           <div>
             <span>Cart Total</span>
-            <span>Rs. 0</span>
+            <span>Rs. {discountTotal}</span>
           </div>
           <div>
             <span>Discount on MRP</span>
-            <span>Rs.0</span>
+            <span>Rs. {(discountTotal - subtotal)}</span>
           </div>
           <div>
             <span>Delivery charges</span>
-            <span>Rs.0</span>
+            <span>Rs. 0</span>
           </div>
         </div>
         <hr style={{ marginTop: "30px" }} />
        
         <div className={cartStyle.rightBottomAmount}>
           <span>Amount to be paid</span>
-          <span>Rs.0</span>
+          <span>Rs. {subtotal}</span>
         </div>
       </div>
       <div className={cartStyle.rightTop}>

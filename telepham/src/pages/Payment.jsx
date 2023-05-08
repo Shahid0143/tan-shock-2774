@@ -2,20 +2,31 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './payment.css';
-import { makePayment } from '../Redux/Cart/action';
-import { Button } from '@chakra-ui/react';
+import { clearCart, makePayment } from '../Redux/Cart/action';
+// import { Button } from '@chakra-ui/react';
 
 const Payment = () => {
   const [paymentMethod, setPaymentMethod] = useState('wallet');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const cartItems = useSelector((state) => state.cartReducer.cart);
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
-
+  let { cart, subtotal, discountTotal } = useSelector((store)=>store.cartReducer)
+  
+  if (cart) {
+    for (let i = 0; i < cart.length; i++) {
+      subtotal += cart[i].o_price;
+      discountTotal += cart[i].price;
+    }
+}
+if(cart.length===0){
+     subtotal=0;
+     discountTotal=0;
+}
   const handlePayment = () => {
     dispatch(makePayment(paymentMethod));
+     clearCart(dispatch)
     navigate('/');
+    alert("Order successfull")
   };
 
   return (
@@ -76,16 +87,16 @@ const Payment = () => {
         <h2>Price Details</h2>
         <div className="cart-value">
           <p>Cart Value:</p>
-          <p>Rs. {totalPrice}</p>
+          <p>Rs. {subtotal}</p>
         </div>
         <div className="delivery-charge">
           <p>Delivery Charge:</p>
-          <p>Rs. 99</p>
+          <p>Rs. 0</p>
         </div>
         <hr />
         <div className="total-price" style={{fontWeight:"bold"}}>
           <p>Total Price:</p>
-          <p>Rs. {(totalPrice + 99 )}</p>
+          <p>Rs. {(subtotal)}</p>
         </div>
       </div>
     </div>

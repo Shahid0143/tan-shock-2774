@@ -1,8 +1,26 @@
-import { ADDTOCART, PAYMENT_SUCCESS } from "./actionType";
+import { ADDTOCART, CARTPRICE, CLEAR_CART, PAYMENT_SUCCESS, REMOVEFROMCART } from "./actionType";
 
-export const addToCart = (dispatch, product) => {
-    dispatch({type:ADDTOCART, payload:product})
-  };
+export const addToCart=(dispatch,el)=> {
+  dispatch({type:ADDTOCART, payload:el})
+  
+}
+
+export const deleteFromCart = (cart, dispatch, id) => {
+  const newCart = cart.filter((el, ind) => {
+    return el.id !== id;
+  });
+  dispatch({type: REMOVEFROMCART, payload: newCart})
+}
+
+export const cartPrice = (dispatch, total, discount) => {
+  dispatch({
+    type: CARTPRICE,
+    payload: {
+      total,
+      discount
+    },
+  });
+};
 
 
 export const makePayment = (paymentDetails) => (dispatch) => {
@@ -15,3 +33,7 @@ export const makePayment = (paymentDetails) => (dispatch) => {
     });
   }
 }
+
+export const clearCart = (dispatch) => {
+ dispatch({type: CLEAR_CART})
+};

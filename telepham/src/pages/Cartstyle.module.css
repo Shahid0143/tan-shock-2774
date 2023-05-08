@@ -8,8 +8,6 @@
 .left {
   border: 1px solid gainsboro;
   width: 65%;
-  display: flex;
-  justify-content: space-between;
   margin: 10px;
 }
 /* left Top */
