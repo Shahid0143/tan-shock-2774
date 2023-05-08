@@ -5,7 +5,7 @@ import {Table,Thead,Tbody,Tr,Th,Td,TableContainer,Heading,IconButton,useToast,Im
 import SingleProduct from './AdminSingleProduct';
  
  
-import { deleteProduct, getProducts, updateProduct } from '../../Redux/Admin/actions';
+import { deleteProduct, getProducts, updateProduct } from '../../Redux/Admin/action';
 
 const ManageProducts = () => {
   const { isLoading, isError, products } = useSelector(store => store.AdminReducer );
