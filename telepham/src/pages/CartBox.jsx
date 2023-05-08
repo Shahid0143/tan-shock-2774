@@ -5,8 +5,6 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { cartPrice, deleteFromCart } from "../Redux/Cart/action";
 
-
-
 const CartBox = ({elem}) => {
   function generateRandomDate() {
     return new Date(+new Date() + Math.floor(Math.random() * 10000000000));
@@ -14,7 +12,6 @@ const CartBox = ({elem}) => {
   const deliveryDate = new generateRandomDate().toLocaleDateString("en-IN");
 
   const [qty, setQty] = useState(1);
-  const [discount, setDiscount] = useState(0);
   const dispatch = useDispatch();
   const {cart} = useSelector((store) => store.cartReducer); 
 
@@ -22,9 +19,6 @@ const CartBox = ({elem}) => {
     let cartTotal = qty *elem.o_price;
     let cartDiscount = qty * elem.price;
     cartPrice(dispatch, cartTotal, cartDiscount);
-    const discountPrice = Math.abs(elem.price - elem.o_price);
-    const discountPercent = (discountPrice / elem.price) * 100;
-    setDiscount(discountPercent.toFixed(1))
   }, [qty]);
 
   const handleDelete = () => {
@@ -33,7 +27,8 @@ const CartBox = ({elem}) => {
   const handleChange = (e) => {
     setQty(e.target.value);
     let cartTotal = qty *elem.o_price;
-    cartPrice(dispatch, cartTotal);
+    let cartDiscount = qty *elem.price;
+    cartPrice(dispatch, cartTotal, cartDiscount);  
   };
 
   return (

@@ -24,7 +24,7 @@ const initState = {
       case CARTPRICE: {
         return {
           ...state,
-          subtotal: state.subTotal + payload.total,
+          subtotal: payload.total,
           discountTotal: payload.discount,
         };
       }

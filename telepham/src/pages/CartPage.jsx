@@ -4,17 +4,24 @@ import Address from "./Address"
 import { useSelector } from "react-redux";
 
 import CartBox from "./CartBox";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const CartPage = () => {
+  // const [ deliveryAmt, setDeliveyAmt ] = useState(0)
  let { cart, subtotal, discountTotal } = useSelector((store)=>store.cartReducer)
   
+ console.log("r",subtotal,discountTotal)
   if (cart) {
     for (let i = 0; i < cart.length; i++) {
       subtotal += cart[i].o_price;
       discountTotal += cart[i].price;
+      // console.log(subtotal,discountTotal)
     }  
+    // if( subtotal<3999 ){
+    //   setDeliveyAmt(99)
+    console.log(subtotal,discountTotal)
   }
-
   if(cart.length===0){
     subtotal=0;
     discountTotal=0;
@@ -31,6 +38,11 @@ const CartPage = () => {
         <span>
           <h1>{cart.length} Item in your Cart</h1>
         </span>
+        <Link to={"/medicine"}>
+        <span>
+          <h1>Add Item</h1>
+        </span>
+        </Link>
       </div>
       
       <div >
@@ -62,7 +74,7 @@ const CartPage = () => {
        
         <div className={cartStyle.rightBottomAmount}>
           <span>Amount to be paid</span>
-          <span>Rs. {subtotal}</span>
+          <span>Rs. {(subtotal + 0)}</span>
         </div>
       </div>
       <div className={cartStyle.rightTop}>

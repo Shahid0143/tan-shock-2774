@@ -4,7 +4,7 @@ import axios from "axios"
 export const getSingleProduct = ({id,product}) => (dispatch) => {
    
     dispatch({type: GET_SINGLEPRODUCT_LOADING})
-    axios.get( ` http://localhost:3000/products/${id}`, product)
+    axios.get( ` http://localhost:8080/products/${id}`, product)
     .then((res)=>{
 console.log(res.data)
         dispatch({type:GET_SINGLEPRODUCT_SUCCESS, payload:res.data});

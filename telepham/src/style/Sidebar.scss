@@ -1,0 +1,106 @@
+#sidebar.sidebar {
+  //   border: 1px solid red;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
+  //   background-color: rgb(245, 245, 245);
+  border-radius: 6px;
+  // margin-left: 20px;
+  margin-top: 10px;
+
+  .sub-heading {
+    color: teal;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 27px;
+      line-height: 25px;
+      letter-spacing: 0.044em
+  }
+
+  .filtering {
+    position: relative;
+
+  }
+
+  select {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .osama {
+    // height:50px;
+    margin: 10px;
+    border: 1px solid rgb(200, 198, 198);
+    border-radius: 4px;
+
+    // position: relative;
+    span {
+      cursor: pointer;
+    }
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+
+  .shahid {
+    display: "shahid";
+    position: absolute;
+    top: 60px;
+    width: 93%;
+    left: 10px;
+    background-color: white;
+    z-index: 1;
+
+    p {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+      padding: 5px;
+      //   margin-top: 5px;
+      // border: 1px solid rgb(200, 198, 198);
+      //   border-bottom: 1px solid rgb(200, 198, 198);
+      border-bottom: 1px solid teal;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+
+      label {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #sidebar.sidebar {
+
+
+    width: 100%;
+    justify-content: center;
+
+  }
+
+}
+ .sort {
+   display: grid;
+   margin-left: 4rem;
+   label{
+    color: rgb(230, 157, 21);
+   }
+ }
+.sd{
+  font-size: 17px;
+    line-height: 38px;
+}

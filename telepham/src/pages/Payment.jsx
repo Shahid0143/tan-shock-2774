@@ -7,6 +7,7 @@ import { clearCart, makePayment } from '../Redux/Cart/action';
 
 const Payment = () => {
   const [paymentMethod, setPaymentMethod] = useState('wallet');
+  const [ deliveryAmt, setDeliveyAmt ] = useState(0)
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ const Payment = () => {
       subtotal += cart[i].o_price;
       discountTotal += cart[i].price;
     }
+    if( subtotal<3999 ){
+     setDeliveyAmt(99)
+   }
 }
 if(cart.length===0){
      subtotal=0;
@@ -91,12 +95,12 @@ if(cart.length===0){
         </div>
         <div className="delivery-charge">
           <p>Delivery Charge:</p>
-          <p>Rs. 0</p>
+          <p>Rs. {deliveryAmt} </p>
         </div>
         <hr />
         <div className="total-price" style={{fontWeight:"bold"}}>
           <p>Total Price:</p>
-          <p>Rs. {(subtotal)}</p>
+          <p>Rs. {(subtotal + deliveryAmt)}</p>
         </div>
       </div>
     </div>

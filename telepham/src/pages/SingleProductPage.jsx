@@ -34,7 +34,7 @@ function SingleProductPage() {
   }
 
   return (
-    <Box px="40px" width={"100%"}  boxShadow= "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" >
+    <Box marginTop={"5%"} px="40px" width={"100%"}  boxShadow= "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" >
     <Box >
        <Flex className="content" >
       <div className="leftInd" style={{width:"70%"

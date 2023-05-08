@@ -1,19 +1,23 @@
-import './App.css';
 
-import CartPage from './pages/CartPage';
-import Payment from './pages/Payment';
-import SingleProductPage from './pages/SingleProductPage';
+
+
+
+
+// import "./App.scss"
+import Main from "./components/Main"
+
+import Navbar from "./components/Navbar"
+import './style/App.scss'
+import AllRoutes from './AllRoutes';
+
 
 function App() {
   return (
-    <div className="App">
+    <div >
+      <Navbar />
+      <AllRoutes />
 
-      <SingleProductPage/>
-      <CartPage/>
-      <Payment/>
-      {/* <Address/> */}
     </div>
-  );
+  )
 }
-
 export default App;
