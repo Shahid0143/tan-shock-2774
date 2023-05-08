@@ -13,8 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-// import { Footer2 } from '../Components/Fotter2'
-// import Navbar2 from '../Components/Navbar2'
+
 
 const AdminLogin = () => {
     const [password, setPassword] = useState("admin")

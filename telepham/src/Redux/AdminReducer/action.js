@@ -157,7 +157,7 @@ export const getAdminList = async (dispatch) => {
   dispatch(getAdminListRequest());
   try {
     const { data } = await axios.get(
-      "https://hilarious-erin-shift.cyclic.app/admin"
+      "https://shy-puce-binturong-ring.cyclic.app/admin"
     );
     dispatch(getAdminListSuccess(data));
   } catch (error) {
@@ -168,7 +168,7 @@ export const getAdminList = async (dispatch) => {
 export const addAdmin = (admin) => async (dispatch) => {
   dispatch(addAdminRequest());
   try {
-    let { data } = await axios.post("url", admin);
+    let { data } = await axios.post("https://shy-puce-binturong-ring.cyclic.app/admin", admin);
     dispatch(addAdminSuccess(data));
     return data;
   } catch (error) {
@@ -179,7 +179,7 @@ export const addAdmin = (admin) => async (dispatch) => {
 export const deleteAdmin = (id) => async (dispatch) => {
   dispatch(deleteAdminRequest());
   try {
-    let { data } = await axios.delete(`url/admin/${id}`);
+    let { data } = await axios.delete(`https://shy-puce-binturong-ring.cyclic.app/admin/${id}`);
     dispatch(deleteAdminSuccess(id));
     return data;
   } catch (error) {
@@ -252,7 +252,7 @@ export const passOrder = (orderId) => async (dispatch) => {
           status: "Passed",
         })
         .then(() => dispatch(getOrders));
-      // axios.put(`https://universal-mall-api.onrender.com/orders/${orderId}`,updatedOrder).then(()=>dispatch(getOrders));
+      
     }
   });
 };
