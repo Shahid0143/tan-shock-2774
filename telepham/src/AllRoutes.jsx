@@ -12,6 +12,7 @@ import Consult2 from "./components/Consult2";
 import Consult3 from "./components/Consult3";
 import { Admin } from "./Page/Admin";
 import { AdminRoutes } from "./Component/Admin/AdminRoutes";
+import Main from "./components/Main";
 
 function AllRoutes() {
   return (
