@@ -5,11 +5,11 @@ import { addProduct } from '../../Redux/AdminReducer/action';
 
 
 const initForm = {
-  description: '',
-  brand: '',
+  desc: '',
+  name: '',
   img: '',
-  originalPrice: '',
-  discountPrice: '',
+  o_price: '',
+  price: '',
   category: ''
 }
 const AddProducts = () => {
@@ -18,7 +18,7 @@ const AddProducts = () => {
   const toast = useToast();
 
   const [form, setForm] = useState(initForm);
-  const price = form.originalPrice.split('-');
+  const price = form.o_price.split('-');
   const formChangeHandler = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value })
@@ -26,11 +26,11 @@ const AddProducts = () => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    const discount = form.originalPrice - form.discountPrice;
-    const discountPercent = discount / form.originalPrice * 100;
+    const discount = form.o_price - form.price;
+    const discountPercent = price / form.o_price * 100;
 
 
-    form.originalPrice = `${form.originalPrice}-${discountPercent.toFixed(2)}%` 
+    form.originalPrice = `${form.o_price}-${discountPercent.toFixed(2)}%` 
 
     try {
       dispatch(addProduct(form))
@@ -62,16 +62,16 @@ const AddProducts = () => {
             <FormControl isRequired>
               <FormLabel m={2} color={"white"}>Product Name</FormLabel>
               <Input m={2} type='text'
-                name='description'
+                name='desc'
                 background='#fff'
                 onChange={formChangeHandler}
-                value={form.description}
+                value={form.desc}
                 placeholder="Enter Product Name"
               />
 
               <FormLabel m={2} color={"white"} > Product Brand</FormLabel>
-              <Input m={2} type='text' name='brand' background='#fff' onChange={formChangeHandler}
-                value={form.brand}
+              <Input m={2} type='text' name='name' background='#fff' onChange={formChangeHandler}
+                value={form.name}
                 placeholder="Enter Product Brand" />
               <FormLabel color={"white"} >Product Image Link</FormLabel>
 
@@ -81,22 +81,22 @@ const AddProducts = () => {
                />
               <FormLabel color={"white"} >Product Original Price</FormLabel>
 
-              <Input m={2} type='number' name='originalPrice' background='#fff' 
+              <Input m={2} type='number' name='o_price' background='#fff' 
               onChange={formChangeHandler} 
-              value={form.originalPrice} 
+              value={form.o_price} 
               placeholder="Enter Product Price"
               />
               <FormLabel m={2} color={"white"} >Product Discount %</FormLabel>
 
-              <Input m={2} type='number' name='discountPrice' background='#fff' onChange={formChangeHandler} value={form.discountPrice} 
+              <Input m={2} type='number' name='price' background='#fff' onChange={formChangeHandler} value={form.price} 
                placeholder="Enter  Discount %"
               />
-              <FormLabel color={"white"} >Product Category</FormLabel>
+              <FormLabel color={"white"} >Product Rating</FormLabel>
 
-              <Input m={2} type='text' name='category' background='#fff'
+              <Input m={2} type='text' name='rating' background='#fff'
                onChange={formChangeHandler} 
-               value={form.category}
-               placeholder="Enter Product Category"
+               value={form.rating}
+               placeholder="Enter Product rating"
               />
               <Button m={2} type='submit' colorScheme='teal' marginTop='2' color={"white"}>Add New Product</Button>
             </FormControl>
