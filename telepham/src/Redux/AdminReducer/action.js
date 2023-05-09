@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   ADD_PRODUCT_FAILURE,
   ADD_PRODUCT_REQUEST,
@@ -85,18 +86,23 @@ const getOrdersFailure = () => ({ type: GET_ORDERS_FAILURE });
 const getCartsSuccess = (payload) => ({ type: GET_CARTS_SUCCESS, payload });
 
 export const getProducts = (dispatch) => {
+  
   dispatch(getProductDataRequest());
   axios
-    .get(`url/medicine`)
-    .then((res) => dispatch(getProductDataSuccess(res.data)))
+    .get(`https://shy-puce-binturong-ring.cyclic.app/medicine`)
+    
+    .then((res) => dispatch(getProductDataSuccess((res.data)))
+    )
+   
     .catch(() => dispatch(getProductDataFailure()));
+   
 };
 
 export const addProduct = (product) => async (dispatch) => {
-  dispatch(addProductRequest());
+  dispatch(addProductRequest(""));
   try {
     const { data } = await axios.post(
-      "url",
+      "https://shy-puce-binturong-ring.cyclic.app/medicine",
       product
     );
     dispatch(addProductSuccess(data));
@@ -109,7 +115,7 @@ export const addProduct = (product) => async (dispatch) => {
 export const deleteProduct = (id) => async (dispatch) => {
   dispatch(deleteProductRequest());
   try {
-    axios.delete(`url/${id}`);
+    axios.delete(`https://shy-puce-binturong-ring.cyclic.app/medicine/${id}`);
     dispatch(deleteProductSuccess(id));
   } catch (error) {
     dispatch(deleteProductFailure(error));
@@ -119,7 +125,7 @@ export const deleteProduct = (id) => async (dispatch) => {
 export const updateProduct = (id, editValue) => async (dispatch) => {
   dispatch(updateProductRequest());
   try {
-    axios.patch(`https://universal-mall-api.onrender.com/products/${id}`, {
+    axios.patch(`https://shy-puce-binturong-ring.cyclic.app/medicine/${id}`, {
       discountPrice: +editValue,
     });
   } catch (error) {
@@ -131,7 +137,7 @@ export const getUsersList = async (dispatch) => {
   dispatch(getUserListRequest());
   try {
     const { data } = await axios.get(
-      "https://universal-mall-api.onrender.com/users"
+      "https://shy-puce-binturong-ring.cyclic.app/admin"
     );
     dispatch(getUserListSuccess(data));
   } catch (error) {
@@ -143,7 +149,7 @@ export const deleteUser = (id) => async (dispatch) => {
   dispatch(deleteUserRequest());
   try {
     let res = await axios.delete(
-      `https://universal-mall-api.onrender.com/users/${id}`
+      `https://shy-puce-binturong-ring.cyclic.app/admin/${id}`
     );
     console.log(res);
     dispatch(deleteUserSuccess(id));
@@ -156,9 +162,8 @@ export const deleteUser = (id) => async (dispatch) => {
 export const getAdminList = async (dispatch) => {
   dispatch(getAdminListRequest());
   try {
-    const { data } = await axios.get(
-      "https://shy-puce-binturong-ring.cyclic.app/admin"
-    );
+    const { data } = await axios.get("https://shy-puce-binturong-ring.cyclic.app/admin");
+  
     dispatch(getAdminListSuccess(data));
   } catch (error) {
     dispatch(getAdminListFailure(error));
@@ -189,7 +194,7 @@ export const deleteAdmin = (id) => async (dispatch) => {
 
 const getAllCategories = async () => {
   let { data } = await axios.get(
-    "https://universal-mall-api.onrender.com/products"
+    "https://shy-puce-binturong-ring.cyclic.app/medicine"
   );
   const categories = [];
   data.forEach((product) => {
@@ -203,7 +208,7 @@ export const getCategories = async (dispatch) => {
   dispatch(getCategoriesRequest());
   const allCategories = await getAllCategories();
   const { data: orders } = await axios.get(
-    "https://universal-mall-api.onrender.com/orders"
+    "https://shy-puce-binturong-ring.cyclic.app/medicine"
   );
   let obj = {};
   orders.forEach((order) => {
@@ -218,7 +223,7 @@ export const getOrders = async (dispatch) => {
   dispatch(getOrdersRequest());
   try {
     const { data } = await axios.get(
-      "https://universal-mall-api.onrender.com/orders"
+      "https://shy-puce-binturong-ring.cyclic.app/medicine"
     );
     dispatch(getOrdersSuccess(data));
   } catch (error) {

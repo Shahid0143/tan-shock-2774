@@ -10,6 +10,9 @@ import Main from "./components/Main";
 import Consult from "./components/Consult";
 import Consult2 from "./components/Consult2";
 import Consult3 from "./components/Consult3";
+import { Admin } from "./Page/Admin";
+import { AdminRoutes } from "./Component/Admin/AdminRoutes";
+
 function AllRoutes() {
   return (
     <Routes>
@@ -21,7 +24,12 @@ function AllRoutes() {
       <Route path="/consult2" element={<Consult2 />} />
       <Route path="/consult3" element={<Consult3 />} />
       <Route path="/adminLogin" element={<AdminLogin />} />
+      <Route path="/admin" element={
+          <Admin />
+ 
+      }></Route>
       <Route path="*" element={<PageNotFound />} />
+
     </Routes>
   );
 }

@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import {Table,Thead,Tbody,Tr,Th,Td,TableContainer,Heading,IconButton,useToast,Image,CircularProgress, Box, Grid} from '@chakra-ui/react'
  import {FiEdit, FiUserX} from 'react-icons/fi';
 import SingleProduct from './AdminSingleProduct';
+import { deleteProduct, getProducts, updateProduct } from '../../Redux/AdminReducer/action';
  
  
-import { deleteProduct, getProducts, updateProduct } from '../../Redux/Admin/action';
+// import { deleteProduct, getProducts, updateProduct } 
+// from '../../Redux/AdminReducer/reducer';
 
 const ManageProducts = () => {
   const { isLoading, isError, products } = useSelector(store => store.AdminReducer );

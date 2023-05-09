@@ -2,13 +2,14 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {Table,Thead,Tbody,Tr,Th,Td,TableContainer,Heading,IconButton,useToast,Image,CircularProgress, Box} from '@chakra-ui/react'
 import {FiUserX} from 'react-icons/fi';
-import { deleteAdmin, getAdminList } from '../../Redux/Admin/actions';
+
+import { deleteAdmin,getAdminList } from '../../Redux/AdminReducer/action';
 
 const ManageAdmins = () => {
   const { isLoadingAdminList, isErrorAdminList, admins } = useSelector(store => store.AdminReducer);
   const dispatch = useDispatch();
   const toast = useToast();
-
+console.log(admins);
   const handleDelete =(admin) => {
     try {
       dispatch(deleteAdmin(admin.id));
@@ -33,14 +34,14 @@ const ManageAdmins = () => {
    useEffect(() => {
      dispatch(getAdminList)
    }, []);
-   
+
   return (
     <Box  bg={"blue.900"}   pl={40 }  w={"100%"} h={"100vh"} >
       <Heading size='md' color={"white"} >Manage Admins</Heading>
       {isLoadingAdminList && <CircularProgress isIndeterminate color='green.300' />}
       {isErrorAdminList && <h2>Error Occured while getting Admin list</h2>}
         <div>
-          {admins.length > 0 && 
+          {admins && admins.length > 0 && 
           <TableContainer color={"white"} >
           <Table    size={'lg'} bg={"blue.900"} >
             <Thead   >
@@ -55,7 +56,7 @@ const ManageAdmins = () => {
             </Thead>
             <Tbody>
               {admins.map(admin=><Tr key={admin.id}>
-                <Td><Image src={admin.image} alt={admin.name} boxSize='90px' borderRadius='full' fontSize={26}/></Td>
+                <Td><Image src={admin.image || 'https://via.placeholder.com/150'} alt={admin.name} boxSize='90px' borderRadius='full' fontSize={26}/></Td>
                 <Td>{admin.name}</Td>
                 <Td>{admin.email}</Td>
                 <Td>{admin.contact}</Td>
@@ -70,4 +71,5 @@ const ManageAdmins = () => {
     </Box>
   )
 }
-export default ManageAdmins;
+
+export default ManageAdmins;

@@ -7,14 +7,14 @@ import ManageUsers from './ManageUsers';
 import ManageOrders from './ManageOrders';
 import ManageProducts from './ManageProducts';
 import AddProducts from './AddProducts';
-import AddAdmins from './AddAdmins';
+import AddAdmins from "./Addadmin"
  
-import  logo from "./styles-up.jpg"
+import logo from "./logo/2mglogo.png"
 import { useDispatch } from 'react-redux';
-// import { setLogout } from '../../redux/Auth/actions';
 import axios from 'axios';
-import Home from '../../Pages/HomePage/Home';
+
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/Navbar';
 
 const LinkItems = [
     { name: 'Dashboard', compName: 'Dashboard', heading: 'Dashboard', icon: FiHome },
@@ -56,7 +56,7 @@ function SidebarWithHeader({ children }) {
         else if (compName === 'ManageProducts') return <ManageProducts />
         else if (compName === 'AddProducts') return <AddProducts />
         else if (compName === 'AddAdmins') return <AddAdmins />
-        else if (compName === 'Home') return <Home />
+        else if (compName === 'Home') return <Navbar />
     }
     
     useEffect(() => {
@@ -75,7 +75,7 @@ function SidebarWithHeader({ children }) {
 
                 borderRightColor={useColorModeValue('gray.200', 'gray.700')} w={{ base: 'full', md: 60 }} pos="fixed" h="full" {...rest}>
                 <Flex h="20" alignItems={"center"} justifyContent="center">
-                    <Image  w={200} src={ logo} h={20}/>
+                    <Image  w={200} src={ "gukgth"} h={20}/>
                 </Flex>
                 {LinkItems.map((link) => (
 
