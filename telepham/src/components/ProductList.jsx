@@ -9,6 +9,8 @@ function ProductList() {
   let { cart } = useSelector((store) => store.cartReducer);
   const product = useSelector((store) => store.ProductReducer.products);
   const [count, setcount] = useState(0);
+  const [page, setpage] = useState(1);
+  const [seaechParams, setseaechParams] = useSearchParams();
 
   // console.log(product);
   const location = useLocation();
