@@ -10,8 +10,8 @@ import SingleProductPage from "./pages/SingleProductPage";
 import Consult from "./components/Consult";
 import Consult2 from "./components/Consult2";
 import Consult3 from "./components/Consult3";
-import Main from "./components/Main";
-// import Admin from "./Page/AdminLogin"
+import { Admin } from "./Page/Admin";
+import { AdminRoutes } from "./Component/Admin/AdminRoutes";
 
 function AllRoutes() {
   return (
@@ -28,6 +28,9 @@ function AllRoutes() {
       <Route path="/consult" element={<Consult />} />
       <Route path="/consult2" element={<Consult2 />} />
       <Route path="/consult3" element={<Consult3 />} />
+      <Route path="/adminLogin" element={<AdminLogin />} />
+      <Route path="/admin" element={<Admin />}></Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }

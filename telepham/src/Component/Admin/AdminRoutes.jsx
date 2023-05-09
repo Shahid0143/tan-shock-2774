@@ -4,7 +4,7 @@ import ManageAdmins from "./ManageAdmins";
 import ManageProducts from "./ManageProducts";
 import ManageOrders from "./ManageOrders";
 import AddProducts from "./AddProducts";
-import AddAdmins from "./AddAdmins"
+import AddAdmins from "./Addadmin"
 export const AdminRoutes = () => {
   return (
     <>

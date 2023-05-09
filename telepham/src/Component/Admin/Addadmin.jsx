@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useToast, Select, FormControl, Input, Heading, FormLabel, Button, Box, Stack } from "@chakra-ui/react";
 import { useState } from "react";
-import { addAdmin } from "../../Redux/AdminReducer/reducer";
+import { addAdmin } from "../../Redux/AdminReducer/action";
+
 const initForm = {
   name: '',
   email: '',

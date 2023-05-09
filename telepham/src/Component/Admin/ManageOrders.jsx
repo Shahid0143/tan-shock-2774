@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {Table,Thead,Tbody,Tr,Th,Td,TableContainer,Heading,IconButton,useToast,Image,CircularProgress, Box} from '@chakra-ui/react'
 import {FiUserX} from 'react-icons/fi';
-import { deleteAdmin, getAdminList } from '../../Redux/Admin/actions';
+// import { deleteAdmin, getAdminList } from '../../Redux/Admin/actions';
 import { useGet } from '../../hooks/useGet';
-const url=`https://growup.onrender.com/fashion`
+const url=`https://shy-puce-binturong-ring.cyclic.app/medicine`
 // const url=`https://growup.onrender.com/orders`
 const ManageAdmins = () => {
  const  { isLoading, products , serverError }=useGet(url);
@@ -33,8 +33,8 @@ const ManageAdmins = () => {
               { products?.map(cart =>
               <Tr key={cart.id}>
                 <Td>{cart.id}</Td>
-                <Td><Image src={cart.image1} alt={cart.title} boxSize='90px' borderRadius='full' fontSize={26}/></Td>
-                <Td>{cart.Brand}</Td>
+                <Td><Image src={cart.img} alt={cart.title} boxSize='90px' borderRadius='full' fontSize={26}/></Td>
+                <Td>{cart.name}</Td>
                 <Td>{cart.price}</Td>
                 {/* <Td>{cart.quantitiy}</Td> */}
                 <Td>{cart.rating}</Td>

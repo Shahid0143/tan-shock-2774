@@ -1,6 +1,6 @@
 import React from 'react'
-import Admin_Sidebar from "../Components/Admin/Admin_Sidebar"
 
+import Admin_Sidebar from "../Component/Admin/Admin_Sidebar"
 export const Admin = () => {
   return (
 
