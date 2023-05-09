@@ -13,7 +13,10 @@ import Consult3 from "./components/Consult3";
 import { Admin } from "./Page/Admin";
 import { AdminRoutes } from "./Component/Admin/AdminRoutes";
 import Main from "./components/Main";
+
 import PrivateRoute from "./components/PrivateRoute";
+
+
 function AllRoutes() {
   return (
     <Routes>
