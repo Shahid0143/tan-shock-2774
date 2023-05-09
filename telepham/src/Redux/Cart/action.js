@@ -2,7 +2,7 @@ import { ADDTOCART, CARTPRICE, CLEAR_CART, PAYMENT_SUCCESS, REMOVEFROMCART } fro
 
 export const addToCart=(dispatch,el)=> {
   dispatch({type:ADDTOCART, payload:el})
-  
+  saveCartToLocalStorage(getCartFromLocalStorage().concat(el));
 }
 
 export const deleteFromCart = (cart, dispatch, id) => {
@@ -10,6 +10,7 @@ export const deleteFromCart = (cart, dispatch, id) => {
     return el.id !== id;
   });
   dispatch({type: REMOVEFROMCART, payload: newCart})
+  saveCartToLocalStorage(newCart);
 }
 
 export const cartPrice = (dispatch, total, discount) => {
@@ -36,4 +37,14 @@ export const makePayment = (paymentDetails) => (dispatch) => {
 
 export const clearCart = (dispatch) => {
  dispatch({type: CLEAR_CART})
+ saveCartToLocalStorage([]);
+};
+
+const saveCartToLocalStorage = (cart) => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
+
+const getCartFromLocalStorage = () => {
+  const cart = localStorage.getItem("cart");
+  return cart ? JSON.parse(cart) : [];
 };

@@ -1,7 +1,9 @@
 import { ADDTOCART,  CARTPRICE,  CLEAR_CART, PAYMENT_SUCCESS, REMOVEFROMCART } from "./actionType";
 
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
+
 const initState = {
-    cart: [],
+    cart: cartFromLocalStorage,
     subTotal: 0,
     discountTotal: 0,
   };
