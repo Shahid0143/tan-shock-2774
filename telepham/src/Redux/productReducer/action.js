@@ -1,12 +1,13 @@
 import { GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS } from "./actiontype";
 import axios from "axios"
 
-export const getproduct =()=>(dispatch)=>{
+export const getproduct =(obj,page,setcount)=>(dispatch)=>{
     
   // Write logic here
   dispatch({type:GET_PRODUCT_REQUEST})
-  axios.get(`http://localhost:8080/products`).then((res)=>{
-    // console.log(res.data)
+     return axios.get(`http://localhost:8080/products?_limit=6&_page=${page}`,obj).then((res)=>{
+    //  console.log(res)
+     setcount(res)
     dispatch({type:GET_PRODUCT_SUCCESS,payload:res.data})
     
   }).catch((err)=>{

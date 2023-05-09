@@ -14,7 +14,11 @@ import AllRoutes from './AllRoutes';
 function App() {
   return (
     <div >
-      <Navbar />
+
+      
+      <Navbar/>
+     
+
       <AllRoutes />
 
     </div>

@@ -10,21 +10,51 @@ function Sideb() {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const initialOrder = searchParams.get("order");
+  const initialrat = searchParams.getAll("rat");
+  const initialcat = searchParams.get("cat");
   const [order, setOrder] = useState(initialOrder || "");
+  const [rat, setRat] = useState(initialrat || []);
+  const [cat, setcat] = useState(initialcat || []);
+
+  const handlechange = (e) => {
+    let newrat = [...rat];
+    const value = e.target.value;
+
+    if (newrat.includes(value)) {
+      newrat = newrat.filter((el) => el !== value);
+    } else {
+      newrat.push(value);
+    }
+    setRat(newrat);
+  };
 
   const handleSort = (e) => {
     // console.log(e.target.value)
     setOrder(e.target.value);
   };
+  // console.log(rat);
+  const handle1 = (e) => {
+    let newcat = [...cat];
+    const value = e.target.value;
+
+    if (newcat.includes(value)) {
+      newcat = newcat.filter((el) => el !== value);
+    } else {
+      newcat.push(value);
+    }
+    setcat(newcat);
+  };
 
   useEffect(() => {
     let params = {
+      cat,
+      rat,
       order, //category:[male,female]
     };
 
     order && (params.order = order);
     setSearchParams(params);
-  }, [order]);
+  }, [rat, order, cat]);
 
   const popup = () => {
     if (shahid === "none") {
@@ -75,16 +105,26 @@ function Sideb() {
         </div>
         <div className="shahid" style={{ display: shahid }}>
           <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <label htmlFor="">Rating⭐⭐⭐</label>
+            <input
+              type="checkbox"
+              onChange={handlechange}
+              value={"3.3"}
+              style={{ position: "relative", right: " -8px" }}
+            />
           </p>
           <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <label htmlFor="">Rating⭐⭐</label>
+            <input
+              type="checkbox"
+              onChange={handlechange}
+              value={"2.7"}
+              style={{ position: "relative", right: "-20px" }}
+            />
           </p>
           <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <label htmlFor="">Rating⭐⭐⭐⭐</label>
+            <input onChange={handlechange} type="checkbox" value={"4"} />
           </p>
         </div>
       </div>
@@ -96,16 +136,47 @@ function Sideb() {
         </div>
         <div className="shahid" style={{ display: shahid1 }}>
           <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <label htmlFor="">Men👨‍🔬</label>
+            <input type="checkbox" onChange={handle1} value={"men"} />
           </p>
           <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <label htmlFor="">Women👩‍⚕️</label>
+            <input
+              type="checkbox"
+              onChange={handle1}
+              value={"women"}
+              style={{ position: "relative", left: "-9px" }}
+            />
           </p>
           <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <label htmlFor="">Kid👶</label>
+            <input
+              type="checkbox"
+              onChange={handle1}
+              value={"kid"}
+              style={{ position: "relative", right: "-5px" }}
+            />
+          </p>
+        </div>
+      </div>
+      <div className="filtering">
+        <div className="osama">
+          <p>
+            medicines<span>➕</span>
+          </p>
+        </div>
+        <div className="shahid" style={{ display: "none" }}>
+          <p>
+            <label htmlFor="">rating⭐⭐⭐</label>
+            <input onChange={handlechange} type="checkbox" value={"3.3"} />
+          </p>
+          <p>
+            <label htmlFor="">rating⭐⭐</label>
+            <input onChange={handlechange} type="checkbox" value={"2.7"} />
+          </p>
+          <p>
+            <label htmlFor="">rating⭐⭐⭐⭐</label>
+            <input onChange={handlechange} type="checkbox" value={"4"} />
           </p>
         </div>
       </div>
@@ -118,36 +189,15 @@ function Sideb() {
         <div className="shahid" style={{ display: "none" }}>
           <p>
             <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={handlechange} value={"men"} />
           </p>
           <p>
             <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <input onChange={handlechange} type="checkbox" value={"women"} />
           </p>
           <p>
             <label htmlFor="">shahid</label>
-            <input type="checkbox" />
-          </p>
-        </div>
-      </div>
-      <div className="filtering">
-        <div className="osama">
-          <p>
-            medicines<span>➕</span>
-          </p>
-        </div>
-        <div className="shahid" style={{ display: "none" }}>
-          <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
-          </p>
-          <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
-          </p>
-          <p>
-            <label htmlFor="">shahid</label>
-            <input type="checkbox" />
+            <input onChange={handlechange} type="checkbox" value={"kid"} />
           </p>
         </div>
       </div>
