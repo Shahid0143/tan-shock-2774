@@ -7,14 +7,19 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { Provider } from 'react-redux';
 import { store } from './Redux/store';
 import { BrowserRouter } from 'react-router-dom';
+import AuthContextProvider from './context/AuthContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Provider store={store}>
-    <ChakraProvider >
-      <App />
-    </ChakraProvider>
-  </Provider>
+
+      <ChakraProvider  >
+        <AuthContextProvider>
+          <App />
+        </AuthContextProvider>
+      </ChakraProvider>
+    </Provider>
+
   </BrowserRouter>
 );
 

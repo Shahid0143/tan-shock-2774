@@ -4,35 +4,36 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Checkbox,
   Stack,
+  Link,
   Button,
   Heading,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-
-import {Link, useNavigate} from 'react-router-dom'
+import {auth} from "../firebase";
 import {useState} from 'react';
-import {auth} from '../firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import {useNavigate} from 'react-router-dom'
 export default function Login() {
-    const [email, setEmail] = useState("");
+      const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate()
-    const onSingIn = () => {
+const navigate  = useNavigate()
+     const onSingIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredenditals) => {
-             setTimeout(()=>{
+              setTimeout(()=>{
            navigate('/')
         },1000)
+           
         }).catch((error)=> {
             alert(`Invalid email or password`)
         })
 
        
     }
-  return (<>
-
+  return (
     <Flex
       minH={'100vh'}
       align={'center'}
@@ -57,15 +58,15 @@ export default function Login() {
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+              <Input type="password" id='password' value={password} onChange={(e)=> setPassword(e.target.value)}/>
             </FormControl>
             <Stack spacing={10}>
               <Stack
                 direction={{ base: 'column', sm: 'row' }}
                 align={'start'}
                 justify={'space-between'}>
-                <Link to='/sign-up'>+ Create new account</Link>
-                <Link color={'blue.400'}>Forgot password?</Link>
+                <Link color={'blue.400'} onClick={()=> navigate("/sign-up")}>+ Register Here</Link> 
+                <Link color={'blue.400'}>Admin Login</Link>
               </Stack>
               <Button
               onClick={onSingIn}
@@ -81,6 +82,5 @@ export default function Login() {
         </Box>
       </Stack>
     </Flex>
-    </>
   );
 }
