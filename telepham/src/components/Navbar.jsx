@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import "../style/Navbar.scss";
 import { auth } from "../firebase";
 import open from "../images/open.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { AuthContext } from "../context/AuthContext";
 import Swal from "sweetalert2";
