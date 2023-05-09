@@ -17,10 +17,15 @@ import { auth } from "../firebase";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
   const navigate = useNavigate();
+
   const onSingIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredenditals) => {
@@ -89,7 +94,7 @@ export default function Login() {
                   <Link color={"teal.400"} onClick={() => navigate("/sign-up")}>
                     + Register Here
                   </Link>
-                  <Link color={"teal.400"}>Admin Login</Link>
+                  <Link color={"teal.400"} onClick={()=> navigate("/admin")}>Admin Login</Link>
                 </Stack>
                 <Button
                   onClick={onSingIn}

@@ -4,6 +4,14 @@ import { useDispatch } from 'react-redux';
 import { addProduct } from '../../Redux/AdminReducer/action';
 
 
+// "id": 30,
+// "img": "https://onemg.gumlet.io/images/q_auto,h_150,w_150,c_fit,f_auto/jozxpcicvvlzl5vciwil/evum-dark-chocolate-cookie.jpg",
+// "name": "Evum Dark Chocolate Cookie",
+// "desc": "jar of 170 gm Cookie",
+// "rating": "2.6",
+// "o_price": 3400,
+// "price": 3700
+
 const initForm = {
   desc: '',
   name: '',

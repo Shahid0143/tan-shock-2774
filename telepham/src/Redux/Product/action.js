@@ -1,18 +1,18 @@
 import { GET_SINGLEPRODUCT_ERROR, GET_SINGLEPRODUCT_LOADING, GET_SINGLEPRODUCT_SUCCESS } from "./actionTypes"
 import axios from "axios"
 
-export const getSingleProduct = ({id,product}) => (dispatch) => {
-   
-    dispatch({type: GET_SINGLEPRODUCT_LOADING})
-    axios.get( ` http://localhost:8080/products/${id}`, product)
-    .then((res)=>{
-console.log(res.data)
-        dispatch({type:GET_SINGLEPRODUCT_SUCCESS, payload:res.data});
+export const getSingleProduct = ({ id, product }) => (dispatch) => {
 
-    }).catch((err)=>{
+    dispatch({ type: GET_SINGLEPRODUCT_LOADING })
+    axios.get(` https://shy-puce-binturong-ring.cyclic.app/products/${id}`, product)
+        .then((res) => {
+            console.log(res.data)
+            dispatch({ type: GET_SINGLEPRODUCT_SUCCESS, payload: res.data });
 
-        dispatch({type: GET_SINGLEPRODUCT_ERROR})
-    })
+        }).catch((err) => {
+
+            dispatch({ type: GET_SINGLEPRODUCT_ERROR })
+        })
 }
 
 

@@ -132,7 +132,7 @@ function Navbar() {
                 </MenuButton>
                 <MenuList style={{ color: "black" }}>
                   <MenuItem>Profile</MenuItem>
-                  <MenuItem>Setting</MenuItem>
+                  <MenuItem onClick = {()=> navigate("/admin")}>Admin</MenuItem>
                   <MenuDivider />
                   <MenuItem onClick={logOut}>Logout</MenuItem>
                 </MenuList>

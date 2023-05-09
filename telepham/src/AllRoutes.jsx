@@ -14,12 +14,15 @@ import { Admin } from "./Page/Admin";
 import { AdminRoutes } from "./Component/Admin/AdminRoutes";
 import Main from "./components/Main";
 
+import PrivateRoute from "./components/PrivateRoute";
+
+
 function AllRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="/medicine" element={<Main />} />
-      <Route path="/cart" element={<CartPage />} />
+    <Route path="/cart" element={ <PrivateRoute><CartPage /></PrivateRoute>} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/singleProduct/:id" element={<SingleProductPage />} />
       <Route path="/login" element={<Login />} />
