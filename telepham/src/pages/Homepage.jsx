@@ -43,7 +43,7 @@ export default function Homepage() {
             src="https://thumbs.dreamstime.com/b/hospital-line-icon-hospital-line-icon-outline-vector-sign-linear-style-pictogram-isolated-white-medical-building-symbol-logo-108895779.jpg"
             alt=""
           />
-          <p>Hospital</p>
+          <p style={{ lineHeight: "1.1" }}>Hospital</p>
         </div>
         <div className="pic">
           <img

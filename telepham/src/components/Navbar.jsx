@@ -14,6 +14,9 @@ function Navbar() {
     setA("-100%");
   };
 
+  const consult = () => {
+    navigate("/consult");
+  };
   return (
     <div className="nav" id="nav">
       <div className="logo">
@@ -38,7 +41,7 @@ function Navbar() {
             <UnlockIcon />
           </span>
           <p>🏠</p>
-          <button>Consult Now</button>
+          <button onClick={consult}>Consult Now</button>
         </div>
         <div onClick={closePopup} className="close">
           <button>❌</button>

@@ -11,7 +11,7 @@ function App() {
     <div >
       
       <Navbar/>
-      <AllRoutes/>
+      <AllRoutes />
 
     </div>
   );
