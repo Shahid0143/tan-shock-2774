@@ -143,7 +143,7 @@ function Navbar() {
               </span>
             )}
           </div>
-          <p>🏠</p>
+          <p onClick={() => navigate("/cart")}>🏠</p>
           <button onClick={consult}>Consult Now</button>
         </div>
         <div onClick={closePopup} className="close">

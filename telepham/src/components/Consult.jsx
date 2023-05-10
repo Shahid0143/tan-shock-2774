@@ -153,7 +153,7 @@ function Consult() {
               </button>
             </div>
           </div>
-          <div>
+          <div className="kiki">
             <img
               src="https://onemg.gumlet.io/marketing/793368e4-7232-45b3-9690-2fc81da12287.svg"
               alt=""

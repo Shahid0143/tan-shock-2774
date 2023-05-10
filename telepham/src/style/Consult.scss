@@ -1,7 +1,6 @@
-
 #consultations.abu {
 
- margin-top: 5rem;
+    margin-top: 5rem;
 
     .consultations {
         display: flex;
@@ -10,6 +9,10 @@
         margin: auto;
         min-width: 70%;
         font-weight: 600;
+
+        img {
+            width: 100%;
+        }
     }
 
     .careplan_button button {
@@ -46,7 +49,9 @@
                 height: 40px;
                 width: 40px;
             }
+
         }
+
     }
 
     .part2 {
@@ -180,6 +185,7 @@
             grid-row-start: 1;
             grid-row-end: 4;
             height: 200px;
+            width: 100%;
         }
 
         h2 {
@@ -334,5 +340,11 @@
         .consultations>div:nth-child(2) {
             width: 241px;
         }
+    }
+}
+
+.kiki {
+    img {
+        width: 100%;
     }
 }
