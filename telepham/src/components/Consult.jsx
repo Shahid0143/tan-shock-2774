@@ -16,7 +16,6 @@ function Consult() {
           <div className="consultations">
             <div>
               <img
-                width={"84%"}
                 src="http://onemg.gumlet.io/marketing/5e7341e1-0637-4703-a7dc-aa8ea920769b.png"
                 alt=""
               />
@@ -153,7 +152,7 @@ function Consult() {
               </button>
             </div>
           </div>
-          <div>
+          <div className="kiki">
             <img
               src="https://onemg.gumlet.io/marketing/793368e4-7232-45b3-9690-2fc81da12287.svg"
               alt=""

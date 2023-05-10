@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 
 export default function Homepage() {
   return (
@@ -11,7 +12,7 @@ export default function Homepage() {
         </div>
         <div className="s2">
           <img
-            src="https://static.toiimg.com/thumb/msid-60357651,imgsize-27055,width-400,resizemode-4/60357651.jpg"
+            src="https://images.pexels.com/photos/159211/headache-pain-pills-medication-159211.jpeg?cs=srgb&dl=pexels-pixabay-159211.jpg&fm=jpg"
             alt="oso"
           />
         </div>
@@ -97,6 +98,7 @@ export default function Homepage() {
           <p>Awards</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
