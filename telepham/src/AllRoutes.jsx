@@ -4,9 +4,9 @@ import Login from "./Login-SignUp Page/Login";
 import PageNotFound from "./pages/PageNotFound";
 import Homepage from "./pages/Homepage";
 import AdminLogin from "./Page/AdminLogin";
-// import Admin from "./Page/AdminLogin"
-import Main from "./components/Main";
-
+import Payment from "./pages/Payment";
+import CartPage from "./pages/CartPage";
+import SingleProductPage from "./pages/SingleProductPage";
 import Consult from "./components/Consult";
 import Consult2 from "./components/Consult2";
 import Consult3 from "./components/Consult3";
@@ -18,18 +18,19 @@ function AllRoutes() {
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="/medicine" element={<Main />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/payment" element={<Payment />} />
+      <Route path="/singleProduct/:id" element={<SingleProductPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/adminLogin" element={<AdminLogin />} />
+      <Route path="*" element={<PageNotFound />} />
       <Route path="/consult" element={<Consult />} />
       <Route path="/consult2" element={<Consult2 />} />
       <Route path="/consult3" element={<Consult3 />} />
       <Route path="/adminLogin" element={<AdminLogin />} />
-      <Route path="/admin" element={
-          <Admin />
- 
-      }></Route>
+      <Route path="/admin" element={<Admin />}></Route>
       <Route path="*" element={<PageNotFound />} />
-
     </Routes>
   );
 }

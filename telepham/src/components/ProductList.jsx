@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../style/Product.scss";
 import { getproduct } from "../Redux/productReducer/action";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useSearchParams } from "react-router-dom";
-
+import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { addToCart } from "../Redux/Cart/action";
 function ProductList() {
   const dispatch = useDispatch();
-  const [seaechParams, setseaechParams] = useSearchParams();
-  const [page, setpage] = useState(1);
+  let { cart } = useSelector((store) => store.cartReducer);
   const product = useSelector((store) => store.ProductReducer.products);
   const [count, setcount] = useState(0);
+  const [page, setpage] = useState(1);
+  const [seaechParams, setseaechParams] = useSearchParams();
 
   // console.log(product);
   const location = useLocation();
@@ -31,15 +32,29 @@ function ProductList() {
   //  console.log(headers.get("x-total-count"));
   // let x = count.headers.x - total - count;
 
+  const handleAdd = (id) => {
+    const existingItem = cart.find((item) => item.id === id);
+
+    if (existingItem) {
+      alert("Product already present in the cart");
+    } else {
+      const itemToAdd = product.find((item) => item.id === id);
+      addToCart(dispatch, itemToAdd);
+      alert("Product added to the cart");
+    }
+  };
+
   return (
     <div className="products" id="products">
       <div className="container">
         {product.map((item) => (
           <div className="child" key={item.id}>
-            <div className="childimage">
-              {" "}
-              <img src={item.img} alt="das" />
-            </div>
+            <Link to={`/singleProduct/${item.id}`}>
+              <div className="childimage">
+                {" "}
+                <img src={item.img} alt="das" />
+              </div>
+            </Link>
             <div className="childnamem">
               <h2>{item.name}</h2>
               <p style={{ color: "orange" }}>{item.cat}</p>
@@ -63,7 +78,9 @@ function ProductList() {
               </p>
             </div>
 
-            <button className="cartbutton">ADD TO CART</button>
+            <button className="cartbutton" onClick={() => handleAdd(item.id)}>
+              ADD TO CART
+            </button>
           </div>
         ))}
       </div>
