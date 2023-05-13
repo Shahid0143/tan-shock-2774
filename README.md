@@ -53,3 +53,11 @@ Admin Manageproduct
 Admin Manageorder
 
 ![Screenshot (245)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/6e9835ee-665e-43f5-85fe-9b28703e295a)
+
+Add Admin
+![Screenshot (247)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/089c6a6e-d1a6-4049-98f9-d8e49d69b47f)
+
+Manage Admin
+
+
+![Screenshot (248)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/047dc483-9079-4d70-99eb-cff99f9816ed)
