@@ -24,3 +24,32 @@ Cart Page
 
 ![Screenshot (239)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/614945e8-2f14-4566-8278-5d12d734dad5)
 
+
+
+![Screenshot (240)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/50a77e03-315b-4187-8422-8f4b5977e402)
+
+Payment page
+![Screenshot (241)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/865cd84b-9247-43ee-923e-076703b8386d)
+
+Admin Login
+
+
+
+![Screenshot (242)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/aeb72aa1-8c14-4129-b7f8-138144ec8e35)
+Admin dashboard
+
+
+
+![Screenshot (243)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/adc046ef-35d7-48ce-9f80-dfcf4ea48d2d)
+
+Admin Addproduct
+
+![Screenshot (244)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/2e907b43-5ac6-434d-bfe6-d86dfd979e7e)
+
+Admin Manageproduct
+
+![Screenshot (246)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/2df4dee0-2cf6-41e1-a60d-1bdb9257af07)
+
+Admin Manageorder
+
+![Screenshot (245)](https://github.com/Shahid0143/tan-shock-2774/assets/112754760/6e9835ee-665e-43f5-85fe-9b28703e295a)
