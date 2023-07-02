@@ -134,7 +134,9 @@ function Main() {
             <label htmlFor="">Search : </label>
             <input type="text" placeholder="search for products" />
             <span className="l">
-              <SearchIcon style={{ marginTop: "-60px" }} />
+              <SearchIcon
+                style={{ position: "relative", bottom: "27", right: "21" }}
+              />
             </span>
           </div>
           <h3 className="reco">Most recommended</h3>

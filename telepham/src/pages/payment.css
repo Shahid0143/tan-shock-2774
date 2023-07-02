@@ -1,18 +1,20 @@
 .payment-page {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin: auto;
   width: 80%;
   height: 98%;
   margin-top: 5%;
+ 
 }
-
-.payment-options{
+.payment-options {
   width: 40%;
   border: 1px solid gainsboro;
+  background: linear-gradient(to top, white,teal);
+  
 }
 
-.payment-options > h1{
+.payment-options>h1 {
   font-size: 20px;
   font-weight: 550;
   margin-bottom: 2%;
@@ -20,55 +22,122 @@
   border: 1px solid gainsboro;
 }
 
-.payment-options>div{
+.payment-options>div {
   display: flex;
   justify-content: space-around;
   padding: 0%;
   font-size: 16px;
 }
 
-.payment-options>div>div>h3{
-  font-size: 20px ;
+.payment-options>div>div>h3 {
+  font-size: 20px;
   padding: 6%;
 }
 
-img{
-  width: 20%
+
+.wallet-option>img{
+width: 20%;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+.credit-card-option>img{
+  width: 20%;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.pay-now-btn {
+  border: 1px solid teal;
+  background-color: teal;
+  color: white;
+  width: 25%;
+  height: 30px;
+  border-radius: 20px;
+  margin: 2%;
 }
 
-.pay-now-btn{
-border: 1px solid teal;
-background-color: teal;
-color: white;
-width: 25%;
-height: 30px;
-border-radius: 20px;
-margin: 2%
+.credit-card-option>h1 {
+  font-size: 28px;
+  font-weight: 650;
+  padding: 5%;
 }
 
-.credit-card-option>h1{
-font-size: 28px;
-font-weight: 650;
-padding: 5%;
-}
-
-.price-details{
+.price-details {
   width: 40%;
   border: 1px solid gainsboro;
   height: 40%;
+background: linear-gradient(to top, white, rgb(47, 45, 45));
 }
 
-.price-details > h2{
- font-size: 20px;
+.price-details>h2 {
+  font-size: 20px;
   font-weight: 550;
   margin-bottom: 3%;
   padding: 2%;
   border: 1px solid gainsboro;
 }
 
-.price-details>div{
+.price-details>div {
   display: flex;
   justify-content: space-around;
   padding: 6%;
   font-size: 16px;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .payment-page {
+    width: 80%;
+    margin-top: 5%;
+    
+  }
+
+  .payment-options {
+    width: 40%;
+  }
+
+  .price-details {
+    width: 40%;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .payment-page {
+    width: 90%;
+    margin-top: 5%;
+  }
+
+  .payment-options {
+    width: 45%;
+  }
+
+  .price-details {
+    width: 45%;
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .payment-page {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 5%;
+  }
+
+  .payment-options {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .price-details {
+    width: 100%;
+  }
+
+  img {
+    width: 30%;
+  }
+
+  .pay-now-btn {
+    width: 50%;
+  }
 }

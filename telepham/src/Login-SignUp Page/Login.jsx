@@ -19,11 +19,10 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
-
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const navigate = useNavigate();
 
   const onSingIn = () => {
@@ -38,19 +37,16 @@ export default function Login() {
       });
   };
   return (
-    <div style={{ marginTop: "5%", position: "fixed" }}>
+    <div style={{ marginTop: "5%", textAlign: "center" }}>
       <Flex
-        minH={"100vh"}
+        minH={"89vh"}
         align={"center"}
         justify={"center"}
-        bg={useColorModeValue("gray.50", "gray.800")}
+        // bg={useColorModeValue("gray.50", "gray.800")}
+        bg={"blackAlpha.300"}
+        backgroundImage="url('https://static.vecteezy.com/system/resources/thumbnails/015/286/180/small/abstract-doctor-medical-line-medical-treatment-illustration-concept-and-icon-modern-on-health-background-health-insurance-vector.jpg')"
       >
-        <Image
-          width={"68%"}
-          src="https://imageio.forbes.com/specials-images/imageserve/643e9a37f3306b1329052dee//960x0.jpg?format=jpg&width=960"
-          alt=""
-        />
-        <Stack spacing={12} mx={"auto"} maxW={"lg"} py={12} px={6} bg={"teal"}>
+        <Stack spacing={2} mx={"auto"} maxW={"lg"} py={12} px={6} bg={"teal"}>
           <Stack align={"center"}>
             <Heading fontSize={"4xl"} color={"white"}>
               Sign in to your account
@@ -94,7 +90,12 @@ export default function Login() {
                   <Link color={"teal.400"} onClick={() => navigate("/sign-up")}>
                     + Register Here
                   </Link>
-                  <Link color={"teal.400"} onClick={()=> navigate("/admin")}>Admin Login</Link>
+                  <Link
+                    color={"teal.400"}
+                    onClick={() => navigate("/adminLogin")}
+                  >
+                    Admin Login
+                  </Link>
                 </Stack>
                 <Button
                   onClick={onSingIn}

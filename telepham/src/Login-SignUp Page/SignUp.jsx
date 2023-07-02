@@ -49,26 +49,23 @@ export default function SignUp() {
         if (res) {
           Swal.fire("Good job!", "You have been registered!", "success");
           setTimeout(() => {
-            navigate("/");
+            navigate("/login");
           }, 1500);
         }
       })
       .catch((error) => console.log(error));
   };
   return (
-    <div style={{ marginTop: "65px", position: "fixed" }}>
+    <div style={{ marginTop: "60px" }}>
       <Flex
-        minH={"100vh"}
+        minH={"90.3vh"}
         align={"center"}
         justify={"center"}
-        bg={useColorModeValue("gray.50", "gray.800")}
+        // bg={useColorModeValue("gray.50", "gray.800")}
+        bg={"blackAlpha.300"}
+        backgroundImage="url('https://static.vecteezy.com/system/resources/thumbnails/015/286/180/small/abstract-doctor-medical-line-medical-treatment-illustration-concept-and-icon-modern-on-health-background-health-insurance-vector.jpg')"
       >
-        <Image
-          width={"100%"}
-          src="https://imageio.forbes.com/specials-images/imageserve/643e9a37f3306b1329052dee//960x0.jpg?format=jpg&width=960"
-          alt=""
-        />
-        <Stack spacing={2} mx={"auto"} maxW={"lg"} py={12} px={6} bg={"teal"}>
+        <Stack spacing={2} mx={"auto"} maxW={"lg"} py={8.9} px={6} bg={"teal"}>
           <Stack align={"center"}>
             <Heading fontSize={"4xl"} textAlign={"center"}>
               Sign up

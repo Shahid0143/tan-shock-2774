@@ -76,16 +76,6 @@ function Sideb() {
     <div className="sidebar" id="sidebar">
       <h2 className="sub-heading">Product Categories</h2>
       <div className="sort">
-        <div>
-          <label htmlFor="">Sort By Price(high) </label>
-          <input
-            type="radio"
-            name="order"
-            value="desc"
-            defaultChecked={order === "desc"}
-            onChange={handleSort}
-          />
-        </div>
         <div className="sd">
           <label htmlFor="">Sort By Price(low) </label>
           <input
@@ -93,6 +83,16 @@ function Sideb() {
             name="order"
             value="asc"
             defaultChecked={order === "asc"}
+            onChange={handleSort}
+          />
+        </div>
+        <div>
+          <label htmlFor="">Sort By Price (high) </label>
+          <input
+            type="radio"
+            name="order"
+            value="desc"
+            defaultChecked={order === "desc"}
             onChange={handleSort}
           />
         </div>

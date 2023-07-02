@@ -5,25 +5,33 @@
   margin: auto;
   margin-top: 5%;
 }
-/* left */
+
+/* Left side */
 .left {
   border: 1px solid gainsboro;
   width: 65%;
   margin: 10px;
+  /* background-color: rgb(56, 161, 161); */
+  background: linear-gradient(to bottom, white,teal);
+  
+  
 }
-/* left Top */
+
+/* Left Top */
 .leftTop {
   border-bottom: 1px solid gainsboro;
   display: flex;
   justify-content: space-between;
   padding: 5px;
 }
+
 .leftTop h1 {
   font-size: 25px;
   font-weight: 600;
   padding: 10px;
   margin: 5px;
 }
+
 .SaveForLater {
   display: flex;
   width: 21%;
@@ -31,29 +39,33 @@
   padding-top: 8px;
   margin-right: 25px;
 }
-.SaveForLater > p {
+
+.SaveForLater>p {
   color: #006064;
   font-weight: 500;
 }
 
-/* left Bottom */
+/* Left Bottom */
 .leftBottom {
   border-bottom: 1px solid gainsboro;
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
-.leftBottom > div:nth-child(1) {
+
+.leftBottom>div:nth-child(1) {
   width: 25%;
   height: 140px;
   padding-top: 30px;
 }
-.leftBottom > div:nth-child(1) img {
+
+.leftBottom>div:nth-child(1) img {
   width: 50%;
   height: 80%;
   margin: auto;
 }
-.leftBottom > div:nth-child(2) {
+
+.leftBottom>div:nth-child(2) {
   width: 50%;
 }
 
@@ -61,66 +73,224 @@
   margin-top: 20px;
   color: orangered;
 }
+
 .leftBottomLine {
   font-size: 14px;
   color: grey;
   margin-top: 10px;
 }
-.leftBottom > div:nth-child(3) {
+
+.leftBottom>div:nth-child(3) {
   width: 20%;
   display: grid;
   text-align: center;
   padding-top: 20px;
 }
+
 .leftSelect {
   width: 70%;
 }
+
 .delete {
   width: 80%;
   text-align: right;
 }
 
-/* right side */
+/* Right side */
 .right {
   width: 33%;
   padding: 5px;
 }
+
 .rightTop {
   border: 1px solid gainsboro;
   padding: 20px;
   align-items: center;
   margin-top: 3px;
+  background: linear-gradient(to bottom, transparent,black);
 }
+
 .rightTopCart {
   font-size: 18px;
 }
+
 .rightTopCart span {
   font-size: 25px;
   font-weight: 500;
 }
+
 .rightTopCoupon {
   margin-top: 35px;
 }
+
 .rightBottom {
   border: 1px solid gainsboro;
   margin-top: 30px;
   padding: 15px;
+  
+  background: linear-gradient(to bottom, white, pink);
 }
-.rightBottomHeading > h1 {
+
+.rightBottomHeading>h1 {
   font-size: 20px;
   font-weight: 550;
   margin-bottom: 10px;
+ 
 }
+
 .rightBottomCartTotal div {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
   color: gray;
 }
+
 .rightBottomAmount {
   font-size: 18px;
   font-weight: 550;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+}
+.last{
+    background: linear-gradient(to bottom, white, gold);
+    
+ 
+        
+        
+     
+}
+/* Media queries */
+
+/* Large screens */
+@media (max-width: 1200px) {
+  .main {
+    flex-wrap: wrap;
+  }
+
+  .left {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    width: 90%;
+  }
+
+  .right {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .leftTop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftTop h1 {
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .SaveForLater {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .leftBottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .leftBottom>div:nth-child(1) {
+    width: 50%;
+    height: 100px;
+    padding-top: 10px;
+  }
+
+  .leftBottom>div:nth-child(1) img {
+    width: 70%;
+    height: 70%;
+  }
+
+  .leftBottom>div:nth-child(2) {
+    width: 100%;
+  }
+
+  .leftBottomPrice {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .leftBottomLine {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .leftBottom>div:nth-child(3) {
+    width: 30%;
+    padding-top: 10px;
+  }
+
+  .delete {
+    width: 70%;
+    text-align: center;
+  }
+
+  .rightTop {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .rightTopCart {
+    font-size: 16px;
+  }
+
+  .rightTopCart span {
+    font-size: 20px;
+  }
+
+  .rightTopCoupon {
+    margin-top: 20px;
+  }
+
+  .rightBottom {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .rightBottomHeading>h1 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .rightBottomCartTotal div {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .rightBottomAmount {
+    font-size: 14px;
+    margin-top: 5px;
+  }
 }

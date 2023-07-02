@@ -1,5 +1,8 @@
+
+ 
 #sidebar.sidebar {
   //   border: 1px solid red;
+  width: 100%;
   height: 50rem;
   display: flex;
   flex-direction: column;
@@ -16,6 +19,7 @@
       line-height: 25px;
       letter-spacing: 0.044em;
       font-size: 21px;
+     
   }
 
   .filtering {
@@ -79,8 +83,16 @@
       label {
         margin-bottom: 5px;
       }
+     
     }
   }
+}
+
+@media screen and (max-width: 1000px ) {
+#sidebar.sidebar {
+  width: 100%;
+  
+}
 }
 
 @media screen and (max-width: 600px) {

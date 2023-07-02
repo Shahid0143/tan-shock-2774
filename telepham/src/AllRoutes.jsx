@@ -16,13 +16,19 @@ import Main from "./components/Main";
 
 import PrivateRoute from "./components/PrivateRoute";
 
-
 function AllRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="/medicine" element={<Main />} />
-    <Route path="/cart" element={ <PrivateRoute><CartPage /></PrivateRoute>} />
+      <Route
+        path="/cart"
+        element={
+          <PrivateRoute>
+            <CartPage />
+          </PrivateRoute>
+        }
+      />
       <Route path="/payment" element={<Payment />} />
       <Route path="/singleProduct/:id" element={<SingleProductPage />} />
       <Route path="/login" element={<Login />} />
@@ -32,9 +38,7 @@ function AllRoutes() {
       <Route path="/consult" element={<Consult />} />
       <Route path="/consult2" element={<Consult2 />} />
       <Route path="/consult3" element={<Consult3 />} />
-      <Route path="/adminLogin" element={<AdminLogin />} />
       <Route path="/admin" element={<Admin />}></Route>
-      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }
