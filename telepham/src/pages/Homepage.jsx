@@ -91,11 +91,11 @@ export default function Homepage() {
         </div>
         <div className="kk">
           <h1>500+</h1>
-          <p>Satisfied Clients</p>
+          <p className="ks">Satisfied Clients</p>
         </div>
         <div className="kk">
           <h1>100+</h1>
-          <p>Awards</p>
+          <p className="ks">Awards</p>
         </div>
       </div>
       <Footer />

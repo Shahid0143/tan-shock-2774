@@ -548,7 +548,22 @@
     #c1 {
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
+   
+        
+        .pic {
+            width: auto;
+            display: flex;
+          
+         p {
+          position: absolute;
+        
+          
+         }
+           
+        }
+        
     }
+    
 
     #d1 {
         grid-template-columns: repeat(2, 1fr);
@@ -568,6 +583,7 @@
 
         .ks {
             font-size: 14px;
+          
         }
     }
 }
