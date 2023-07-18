@@ -126,17 +126,9 @@ function Navbar() {
                 </MenuList>
               </Menu>
             ) : (
-              <span>
-                <UnlockIcon
-                  style={{
-                    margin: "auto",
-
-                    position: "relative",
-                    right: "-354px",
-                  }}
-                  onClick={() => navigate("/login")}
-                />
-              </span>
+              <div className="lock">
+                <UnlockIcon onClick={() => navigate("/login")} />
+              </div>
             )}
           </div>
           <p onClick={() => navigate("/cart")}>🏠</p>
