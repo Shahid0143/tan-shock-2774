@@ -84,7 +84,7 @@ function Navbar() {
         <i onClick={() => navigate("/")}>
           <img
             className="top-img"
-            style={{ borderRadius: "50%", width: "35%" }}
+            // style={{ borderRadius: "50%", width: "35%" }}
             src="https://static.pocketcasts.com/discover/images/400/9a41cbe0-c5ab-0136-7b94-27f978dac4db.jpg"
             alt=""
           />
@@ -101,21 +101,6 @@ function Navbar() {
         <div className="icon">
           <div className="w">
             {authUser ? (
-              // <Box
-              //   display="flex"
-              //   gap="10px"
-              //   alignItems={"center"}
-              //   justifyContent={"center"}
-              // >
-              //   <Circle size="40px" bg="black" color="white">
-              //     <Text fontSize={"20px"} fontWeight={"600"}>
-              //       {userName}
-              //     </Text>
-              //   </Circle>
-              //   <Button onClick={logOut} colorScheme="red">
-              //     Log Out
-              //   </Button>{" "}
-              // </Box>
               <Menu border="none">
                 <MenuButton
                   className="ck"
@@ -142,7 +127,15 @@ function Navbar() {
               </Menu>
             ) : (
               <span>
-                <UnlockIcon onClick={() => navigate("/login")} />
+                <UnlockIcon
+                  style={{
+                    margin: "auto",
+
+                    position: "relative",
+                    right: "-354px",
+                  }}
+                  onClick={() => navigate("/login")}
+                />
               </span>
             )}
           </div>
@@ -156,7 +149,7 @@ function Navbar() {
 
       <div onClick={openpopup} className="menubar">
         <button>
-          <img src={open} alt="" />
+          <img className="three-line" src={open} alt="" />
         </button>
       </div>
     </div>

@@ -14,8 +14,8 @@
 
   .sub-heading {
     color: teal;
-    text-align: center;
-    padding: 20px 0;
+    // text-align: center;
+    padding: 20px 30px;
       line-height: 25px;
       letter-spacing: 0.044em;
       font-size: 21px;
@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 1000px ) {
 #sidebar.sidebar {
-  width: 100%;
+  width: max-content;
   
 }
 }
@@ -110,9 +110,14 @@
    margin-left: 4rem;
    label{
     color: rgb(230, 157, 21);
+    position: relative;
+    right: 30px;
    }
  }
 .sd{
   font-size: 17px;
     line-height: 38px;
+    input{
+      margin-right: 20px;
+    }
 }

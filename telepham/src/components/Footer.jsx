@@ -25,7 +25,7 @@ export default function Footer() {
           <p>Contact Us</p>
         </div>
       </div>
-      <div className="copyright">@no cop right</div>
+      <div className="copyright">@no copy right</div>
     </div>
   );
 }

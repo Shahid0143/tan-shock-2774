@@ -4,7 +4,10 @@
   .reco {
     padding: 5px 20px;
     color: teal;
-  }
+   } 
+   .search {
+     display: none;
+   }
 
   .heading {
     // border: 1px solid;
@@ -114,7 +117,7 @@
   }
 
   .reachout {
-    width: 60%;
+    width: 65%;
     margin: 60px auto 20px auto;
     background-color: rgb(245, 245, 245);
 
@@ -165,6 +168,7 @@
           border: transparent;
           margin-top: 15px;
           color: rgb(202, 198, 198);
+          width: 100%;
         }
 
         input::placeholder {
@@ -192,7 +196,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media  screen and (max-width: 600px) {
   #ppage.ppage {
     .main {
       grid-template-columns: 100%;
@@ -226,6 +230,7 @@
           input {
             width: 300px;
             margin: auto;
+            margin-bottom: 10px;
           }
         }
       }
@@ -237,47 +242,8 @@
       margin: 0 5px;
     }
   }
-  .search{
-    display: none;
-  }
+ 
 }
 
-        @media screen and (max-width: 600px){
-
-        }
-        .search{
-          // border: 1px solid red;
-          width: 20%;
-          // margin-left: 60rem;
-          position: relative;
-          right: -58rem;
-          margin-top: 5rem;
-          top: 120px;
-          
-          input{
-            padding: 0.2rem;
-            border: 0.5px solid teal;
-            border-radius: 7px;
-            &:hover{
-              background-color: rgb(247, 242, 242);
-             
-            }
-            &:focus{
-              background-color: rgb(221, 243, 247);
-              outline: none;
-            }
-          }
-                    .l {
-                     
-                      margin-left: 15.2rem;
-          
-                      height: 30px;
-                      width: 21px;
-                      // border: 1px solid red;
-                      padding-top: -60px;
-                      position: sticky;
-                    }
-          
-        }
-          
+      
         

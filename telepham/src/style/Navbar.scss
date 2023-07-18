@@ -20,7 +20,8 @@
     letter-spacing: 6px;
     cursor: pointer;
     img {
-        width: 43%;
+        width: 35%;
+        border-radius: 50%;
       }
   }
 
@@ -59,9 +60,9 @@
     button {
       padding: 14px 5px;
       // background-color: teal;
-      color: teal;
+      color:teal;
       border: transparent;
-      font-weight: bold;
+      font-size: 20px;
       cursor: pointer;
       font-size: 92%;
         line-height: 15px;
@@ -69,21 +70,14 @@
          &:hover{
          color: rgb(203, 105, 19);
          
-        }
-       
-       
-      
+        } 
     }
-    // .w{
-    //   border: 1px solid teal;
-    //   height: 2.7rem;
-    //   width:1.3rem;
-      
-    // }
+ 
 
     p {
       // border: 1px solid rgb(224, 224, 224);
       padding: 10px;
+      margin: auto;
     }
   }
 
@@ -91,18 +85,14 @@
     display: none;
 
     button {
-      border: transparent;
-      background-color: transparent;
+    background-color: #ffffff;
       font-size: 25px;
+      margin-right: 18px;
+      border-radius: 50%;
     }
   }
 
-  .menubar {
-    button {
-      background-color: white;
-      border: transparent;
-    }
-  }
+ 
 }
 
 @media all and (max-width: 768px) {
@@ -112,37 +102,38 @@
       position: absolute;
       right: 30px;
 
-      img {
-        width: 29px;
-        height: 22px;
-      }
+      
+            .logo {
+            
+              img {
+                width: 100%;
+              }
+            }
+            .three-line{
+              width: 29px;
+                height: 22px;
+            }
     }
 
     .nav-content {
-      //   background: yellow;
-      box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
-      // box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 50%);
-      // background-color: white;
-      // background-color: transparent;
-      backdrop-filter: blur(45px);
+       box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 50%);
+      background-color: rgba(0, 0, 0, 0.5);
       position: fixed;
-      //   height: 100vh;
-      // flex-direction: column;
-      z-index: 50;
-      width: 50%;
+      z-index: 45;
+      width: 100%;
       right: -100%;
       transition: right 2s;
       top: 0;
-      // justify-content: normal;
-      //   align-items: start;
+      text-align: center;
+      
       grid-template-columns: 100%;
-
       ul {
         grid-template-columns: 100%;
-        font-size: 14px;
+        font-size: 20px;
         margin-top: 57px;
         padding: 0 20px;
         margin-bottom: 0px;
+        color:black
       }
 
       .icon {
@@ -154,8 +145,10 @@
 
         button {
           // width: 80%;
-          padding: 10px;
-          margin-bottom: 10px;
+        font-size: 20px;
+          font-weight: bold;
+          margin: auto;
+          color: black;
         }
       }
     }
@@ -165,6 +158,9 @@
       position: absolute;
       right: 10px;
       top: 10px;
+    }
+    p{
+      padding: 0;
     }
   }
 }
