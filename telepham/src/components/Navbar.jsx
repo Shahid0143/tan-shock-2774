@@ -172,7 +172,7 @@ function Navbar() {
               style={{
                 position: "absolute",
                 top: "20%",
-                right: "11%",
+                right: "10.5%",
 
                 background: "teal",
                 borderRadius: "50%",
