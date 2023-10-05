@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 import CartBox from "./CartBox";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const CartPage = () => {
   // const [ deliveryAmt, setDeliveyAmt ] = useState(0)
