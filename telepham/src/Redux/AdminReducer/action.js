@@ -89,7 +89,7 @@ export const getProducts = (dispatch) => {
   
   dispatch(getProductDataRequest());
   axios
-    .get(`https://shy-puce-binturong-ring.cyclic.app/medicine`)
+    .get(`https://tele-f0mr.onrender.com/medicine`)
     
     .then((res) => dispatch(getProductDataSuccess((res.data)))
     )
@@ -102,7 +102,7 @@ export const addProduct = (product) => async (dispatch) => {
   dispatch(addProductRequest(""));
   try {
     const { data } = await axios.post(
-      "https://shy-puce-binturong-ring.cyclic.app/medicine",
+      "https://tele-f0mr.onrender.com/medicine",
       product
     );
     dispatch(addProductSuccess(data));
@@ -115,7 +115,7 @@ export const addProduct = (product) => async (dispatch) => {
 export const deleteProduct = (id) => async (dispatch) => {
   dispatch(deleteProductRequest());
   try {
-    axios.delete(`https://shy-puce-binturong-ring.cyclic.app/medicine/${id}`);
+    axios.delete(`https://tele-f0mr.onrender.com/medicine/${id}`);
     dispatch(deleteProductSuccess(id));
   } catch (error) {
     dispatch(deleteProductFailure(error));
@@ -125,7 +125,7 @@ export const deleteProduct = (id) => async (dispatch) => {
 export const updateProduct = (id, editValue) => async (dispatch) => {
   dispatch(updateProductRequest());
   try {
-    axios.patch(`https://shy-puce-binturong-ring.cyclic.app/medicine/${id}`, {
+    axios.patch(`https://tele-f0mr.onrender.com/medicine/${id}`, {
       discountPrice: +editValue,
     });
   } catch (error) {
@@ -137,7 +137,7 @@ export const getUsersList = async (dispatch) => {
   dispatch(getUserListRequest());
   try {
     const { data } = await axios.get(
-      "https://shy-puce-binturong-ring.cyclic.app/admin"
+      "https://tele-f0mr.onrender.com/admin"
     );
     dispatch(getUserListSuccess(data));
   } catch (error) {
@@ -149,7 +149,7 @@ export const deleteUser = (id) => async (dispatch) => {
   dispatch(deleteUserRequest());
   try {
     let res = await axios.delete(
-      `https://shy-puce-binturong-ring.cyclic.app/admin/${id}`
+      `https://tele-f0mr.onrender.com/admin/${id}`
     );
     console.log(res);
     dispatch(deleteUserSuccess(id));
@@ -162,7 +162,7 @@ export const deleteUser = (id) => async (dispatch) => {
 export const getAdminList = async (dispatch) => {
   dispatch(getAdminListRequest());
   try {
-    const { data } = await axios.get("https://shy-puce-binturong-ring.cyclic.app/admin");
+    const { data } = await axios.get("https://tele-f0mr.onrender.com/admin");
   
     dispatch(getAdminListSuccess(data));
   } catch (error) {
@@ -173,7 +173,7 @@ export const getAdminList = async (dispatch) => {
 export const addAdmin = (admin) => async (dispatch) => {
   dispatch(addAdminRequest());
   try {
-    let { data } = await axios.post("https://shy-puce-binturong-ring.cyclic.app/admin", admin);
+    let { data } = await axios.post("https://tele-f0mr.onrender.com/admin", admin);
     dispatch(addAdminSuccess(data));
     return data;
   } catch (error) {
@@ -184,7 +184,7 @@ export const addAdmin = (admin) => async (dispatch) => {
 export const deleteAdmin = (id) => async (dispatch) => {
   dispatch(deleteAdminRequest());
   try {
-    let { data } = await axios.delete(`https://shy-puce-binturong-ring.cyclic.app/admin/${id}`);
+    let { data } = await axios.delete(`https://tele-f0mr.onrender.com/admin/${id}`);
     dispatch(deleteAdminSuccess(id));
     return data;
   } catch (error) {
@@ -194,7 +194,7 @@ export const deleteAdmin = (id) => async (dispatch) => {
 
 const getAllCategories = async () => {
   let { data } = await axios.get(
-    "https://shy-puce-binturong-ring.cyclic.app/medicine"
+    "https://tele-f0mr.onrender.com/medicine"
   );
   const categories = [];
   data.forEach((product) => {
@@ -208,7 +208,7 @@ export const getCategories = async (dispatch) => {
   dispatch(getCategoriesRequest());
   const allCategories = await getAllCategories();
   const { data: orders } = await axios.get(
-    "https://shy-puce-binturong-ring.cyclic.app/medicine"
+    "https://tele-f0mr.onrender.com/medicine"
   );
   let obj = {};
   orders.forEach((order) => {
@@ -223,7 +223,7 @@ export const getOrders = async (dispatch) => {
   dispatch(getOrdersRequest());
   try {
     const { data } = await axios.get(
-      "https://shy-puce-binturong-ring.cyclic.app/medicine"
+      "https://tele-f0mr.onrender.com/medicine"
     );
     dispatch(getOrdersSuccess(data));
   } catch (error) {
@@ -233,12 +233,12 @@ export const getOrders = async (dispatch) => {
 
 export const pendingOrder = (orderId) => async (dispatch) => {
   const { data: orders } = await axios.get(
-    `https://universal-mall-api.onrender.com/orders`
+    `https://tele-f0mr.onrender.com/orders`
   );
   orders.forEach((order) => {
     if (order.id === orderId) {
       axios
-        .patch(`https://universal-mall-api.onrender.com/orders/${orderId}`, {
+        .patch(`https://tele-f0mr.onrender.com/orders/${orderId}`, {
           status: "Delayed",
         })
         .then(() => dispatch(getOrders));
@@ -248,12 +248,12 @@ export const pendingOrder = (orderId) => async (dispatch) => {
 
 export const passOrder = (orderId) => async (dispatch) => {
   const { data: orders } = await axios.get(
-    `https://universal-mall-api.onrender.com/orders`
+    `https://tele-f0mr.onrender.com/orders`
   );
   orders.forEach((order) => {
     if (order.id === orderId) {
       axios
-        .patch(`https://universal-mall-api.onrender.com/orders/${orderId}`, {
+        .patch(`https://tele-f0mr.onrender.com/orders/${orderId}`, {
           status: "Passed",
         })
         .then(() => dispatch(getOrders));
@@ -264,12 +264,12 @@ export const passOrder = (orderId) => async (dispatch) => {
 
 export const rejectOrder = (orderId) => async (dispatch) => {
   const { data: orders } = await axios.get(
-    `https://universal-mall-api.onrender.com/orders`
+    `https://tele-f0mr.onrender.com/orders`
   );
   orders.forEach((order) => {
     if (order.id === orderId) {
       axios
-        .patch(`https://universal-mall-api.onrender.com/orders/${orderId}`, {
+        .patch(`https://tele-f0mr.onrender.com/orders/${orderId}`, {
           status: "Rejected",
         })
         .then(() => dispatch(getOrders));

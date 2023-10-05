@@ -1,43 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style/Consult2.scss";
-import axios from "axios";
+// import axios from "axios";
 import Mgmatters from "./Matters";
 import Information from "./Info";
 import { Link } from "react-router-dom";
-// import { toast } from "react-hot-toast";
 
 function Consult2() {
-  let arr = JSON.parse(localStorage.getItem("consult")) || [];
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
-  //   const [data, setData] = useState([]);
   const [popup, setPopup] = useState("none");
+
+  // Initialize arr within the component's scope
+  const arr = JSON.parse(localStorage.getItem("consult")) || [];
+
+  // Retrieve existing data from local storage when the component mounts
+  useEffect(() => {
+    // You can set the retrieved data to your state variables if needed
+    // For example, if you want to display the last stored entry:
+    if (arr.length > 0) {
+      const lastEntry = arr[arr.length - 1];
+      setName(lastEntry.name);
+      setAge(lastEntry.age);
+      setGender(lastEntry.gender);
+    }
+  }, []);
+
   const handleclick = () => {
     setPopup("block");
   };
+
   const closePopup = () => {
     setPopup("none");
   };
 
-  // craete a data to the data base
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   const submitChiththa = () => {
     const Form = {
       name,
       age,
       gender,
     };
-    localStorage.setItem("consult", JSON.stringify([Form]));
 
-    // get the data from data base
+    // Retrieve the existing data from local storage (already initialized as arr)
+    // Add the new form data to the existing data
+    arr.push(Form);
+
+    // Save the updated data back to local storage
+    localStorage.setItem("consult", JSON.stringify(arr));
   };
-  //   axios.get("").then((res) => {
-  //     setData(res.data);
-  //   });
-
   return (
     <>
       <div id="doctorform" className="doctorform">

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./payment.css";
 import { clearCart, makePayment } from "../Redux/Cart/action";
+
 // import { Button } from '@chakra-ui/react';
 
 const Payment = () => {
@@ -32,7 +33,7 @@ const Payment = () => {
     dispatch(makePayment(paymentMethod));
     clearCart(dispatch);
     navigate("/");
-    alert("Order successfull");
+    alert("Order Successfull");
   };
 
   return (
