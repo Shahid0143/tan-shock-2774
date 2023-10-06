@@ -116,9 +116,9 @@ function Navbar() {
       <div style={{ right: a }} className="nav-content">
         <ul>
           <li onClick={() => navigate("/medicine")}>Medicine</li>
-          <li>Doctor</li>
+          <li onClick={() => navigate("/doctor")}>Doctor</li>
           <li>Pharmacy</li>
-          <li>Other Services</li>
+          <li onClick={() => navigate("/service")}>Other Services</li>
         </ul>
 
         <div className="icon">

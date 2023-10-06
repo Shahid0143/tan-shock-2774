@@ -15,11 +15,16 @@ import { AdminRoutes } from "./Component/Admin/AdminRoutes";
 import Main from "./components/Main";
 
 import PrivateRoute from "./components/PrivateRoute";
+import DoctorProfile from "./components/Doctor/DoctorProfile";
+import Telemedicine from "./components/OtherService/Telemedicine";
 
 function AllRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
+      {/* //Doctor  route*/}
+      <Route path="/doctor" element={<DoctorProfile />} />
+      <Route path="/service" element={<Telemedicine />} />
       <Route path="/medicine" element={<Main />} />
       <Route
         path="/cart"
