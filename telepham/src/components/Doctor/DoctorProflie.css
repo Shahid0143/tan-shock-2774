@@ -12,18 +12,15 @@
     border-radius: 50%;
     object-position: center center;  
  }
- .card{
-    
+.card {
     border: 1px solid grey;
-    height: 295px;
-    width: 80%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
     background-color: beige;
-    border-radius: 5px
-    
- }
+    border-radius: 5px;
+}
  .name{
     
     font-size: 40px;
@@ -131,5 +128,11 @@
 @media (max-width: 600px) {
     .modal {
         max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        grid-template-columns: 1fr;
     }
 }

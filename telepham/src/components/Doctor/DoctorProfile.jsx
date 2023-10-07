@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Doctor/DoctorProflie.css";
 import DoctorData from "./DoctorData";
+import { ToastContainer, toast } from "react-toastify";
 
 const DoctorProfile = () => {
   const doctorData = [
@@ -138,6 +139,13 @@ const DoctorProfile = () => {
     e.preventDefault();
     // Handle the appointment submission logic here,
     console.log("Appointment Data:", appointmentInfo);
+
+    // Show a success toast
+    toast.success("Appointment scheduled successfully!", {
+      position: "top-center",
+      autoClose: 3000, // Close the toast after 3 seconds
+    });
+
     // Reset the form after submission
     setAppointmentInfo({
       doctor: "",
@@ -257,6 +265,9 @@ const DoctorProfile = () => {
           </div>
         </div>
       )}
+
+      {/* ToastContainer for Toast notifications */}
+      <ToastContainer position="top-right" autoClose={5000} />
     </>
   );
 };
