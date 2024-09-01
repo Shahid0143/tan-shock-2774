@@ -12,9 +12,7 @@
   width: 65%;
   margin: 10px;
   /* background-color: rgb(56, 161, 161); */
-  background: linear-gradient(to bottom, white,teal);
-  
-  
+  background: linear-gradient(to bottom, white, teal);
 }
 
 /* Left Top */
@@ -40,7 +38,7 @@
   margin-right: 25px;
 }
 
-.SaveForLater>p {
+.SaveForLater > p {
   color: #006064;
   font-weight: 500;
 }
@@ -53,19 +51,19 @@
   padding: 10px;
 }
 
-.leftBottom>div:nth-child(1) {
+.leftBottom > div:nth-child(1) {
   width: 25%;
   height: 140px;
   padding-top: 30px;
 }
 
-.leftBottom>div:nth-child(1) img {
+.leftBottom > div:nth-child(1) img {
   width: 50%;
   height: 80%;
   margin: auto;
 }
 
-.leftBottom>div:nth-child(2) {
+.leftBottom > div:nth-child(2) {
   width: 50%;
 }
 
@@ -80,7 +78,7 @@
   margin-top: 10px;
 }
 
-.leftBottom>div:nth-child(3) {
+.leftBottom > div:nth-child(3) {
   width: 20%;
   display: grid;
   text-align: center;
@@ -107,7 +105,7 @@
   padding: 20px;
   align-items: center;
   margin-top: 3px;
-  background: linear-gradient(to bottom, transparent,black);
+  background: linear-gradient(to bottom, transparent, black);
 }
 
 .rightTopCart {
@@ -127,15 +125,14 @@
   border: 1px solid gainsboro;
   margin-top: 30px;
   padding: 15px;
-  
+
   background: linear-gradient(to bottom, white, pink);
 }
 
-.rightBottomHeading>h1 {
+.rightBottomHeading > h1 {
   font-size: 20px;
   font-weight: 550;
   margin-bottom: 10px;
- 
 }
 
 .rightBottomCartTotal div {
@@ -152,15 +149,9 @@
   display: flex;
   justify-content: space-between;
 }
-.last{
-    background: linear-gradient(to bottom, white, gold);
-    
- 
-        
-        
-     
+.last {
+  background: linear-gradient(to bottom, white, gold);
 }
-/* Media queries */
 
 /* Large screens */
 @media (max-width: 1200px) {
@@ -222,18 +213,18 @@
     padding: 5px;
   }
 
-  .leftBottom>div:nth-child(1) {
+  .leftBottom > div:nth-child(1) {
     width: 50%;
     height: 100px;
     padding-top: 10px;
   }
 
-  .leftBottom>div:nth-child(1) img {
+  .leftBottom > div:nth-child(1) img {
     width: 70%;
     height: 70%;
   }
 
-  .leftBottom>div:nth-child(2) {
+  .leftBottom > div:nth-child(2) {
     width: 100%;
   }
 
@@ -247,7 +238,7 @@
     margin-top: 5px;
   }
 
-  .leftBottom>div:nth-child(3) {
+  .leftBottom > div:nth-child(3) {
     width: 30%;
     padding-top: 10px;
   }
@@ -279,7 +270,7 @@
     padding: 10px;
   }
 
-  .rightBottomHeading>h1 {
+  .rightBottomHeading > h1 {
     font-size: 16px;
     margin-bottom: 5px;
   }

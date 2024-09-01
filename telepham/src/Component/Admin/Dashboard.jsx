@@ -1,6 +1,6 @@
-import ManageUsers from './ManageUsers';
+import ManageUsers from "./ManageUsers";
 
 const Dashboard = () => {
-  return <ManageUsers/>
-}
+  return <ManageUsers />;
+};
 export default Dashboard;

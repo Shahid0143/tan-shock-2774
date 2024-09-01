@@ -143,7 +143,7 @@ const DoctorProfile = () => {
     // Show a success toast
     toast.success("Appointment scheduled successfully!", {
       position: "top-center",
-      autoClose: 3000, // Close the toast after 3 seconds
+      autoClose: 3000,
     });
 
     // Reset the form after submission
@@ -167,7 +167,7 @@ const DoctorProfile = () => {
 
   const handleAppointmentClick = (doctor) => {
     setSelectedDoctor(doctor);
-    setShowModal(true); // Show the modal
+    setShowModal(true);
   };
 
   return (

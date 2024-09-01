@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 import {
   Table,
   Thead,
@@ -9,8 +9,8 @@ import {
   Td,
   TableContainer,
   Heading,
-  IconButton,
-  useToast,
+  // IconButton,
+  // useToast,
   Image,
   CircularProgress,
   Box,
@@ -19,7 +19,7 @@ import { FiUserX } from "react-icons/fi";
 // import { deleteAdmin, getAdminList } from '../../Redux/Admin/actions';
 import { useGet } from "../../hooks/useGet";
 const url = `https://tele-f0mr.onrender.com/medicine`;
-// const url=`https://growup.onrender.com/orders`
+
 const ManageAdmins = () => {
   const { isLoading, products, serverError } = useGet(url);
 
@@ -73,14 +73,5 @@ const ManageAdmins = () => {
     </Box>
   );
 };
-// "image1": "https://assetscdn1.paytm.com/images/catalog/product/J/JE/JEWVIGHNAHARTA-VIGH1196979EA0CDD9/1562708763888_0..jpg?imwidth=282&impolicy=hq",
-// "Brand": "Vighnaharta",
-// "title": "Silver Brass Ring",
-// "price": 249,
-// "MRP": "1163",
-// "Category": "jewellary",
-// "rating": 4.7,
-// "quantitiy": 1,
-// "id": 1
 
 export default ManageAdmins;

@@ -1,99 +1,93 @@
-
-/* DoctorData.css */
-
 .doctor-card {
-   margin-top: 60px;
+  margin-top: 60px;
 }
- .doctor-avatar img{
-    object-fit: cover;
-    height: 200px;
-    width: 200px;
-    /* border: 1px solid red; */
-    border-radius: 50%;
-    object-position: center center;  
- }
+.doctor-avatar img {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  object-position: center center;
+}
 .card {
-    border: 1px solid grey;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    padding: 20px;
-    background-color: beige;
-    border-radius: 5px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  background-color: beige;
+  border-radius: 5px;
 }
- .name{
-    
-    font-size: 40px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(53, 0, 128);
- }
- .spec{
-    font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: teal;
- }
- .rating{
-    font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: yellow;
- }
-
+.name {
+  font-size: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(53, 0, 128);
+}
+.spec {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: teal;
+}
+.rating {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: yellow;
+}
 
 /* Modal Container */
 .modal-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
-    z-index: 1000;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  z-index: 1000;
 }
 
 /* Modal Content */
 .modal {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
 }
 
 /* Modal Close Button */
 .modal button {
-    border: 1px solid teal;
-    background-color: teal;
-    color: yellow;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
+  border: 1px solid teal;
+  background-color: teal;
+  color: yellow;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /* Modal Title */
 .modal h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 /* Modal Form Inputs */
 .modal form div {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Modal Form Inputs Label */
 .modal form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 /* Modal Form Inputs */
@@ -101,38 +95,35 @@
 .modal form input[type="date"],
 .modal form input[type="time"],
 .modal form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Modal Form Submit Button */
 .modal form button[type="submit"] {
-    background-color: teal;
-    color: yellow;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: teal;
+  color: yellow;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-/* Modal Form Submit Button Hover Effect */
 .modal form button[type="submit"]:hover {
-    background-color: #008080;
-    /* Darker teal on hover */
-}
-
-/* Responsive Styling */
-@media (max-width: 600px) {
-    .modal {
-        max-width: 90%;
-    }
+  background-color: #008080;
 }
 
 @media (max-width: 600px) {
-    .card {
-        grid-template-columns: 1fr;
-    }
+  .modal {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
 }

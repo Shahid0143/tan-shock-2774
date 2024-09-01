@@ -10,7 +10,6 @@ const AppointmentModal = ({ isOpen, onClose, onSubmit }) => {
           &times;
         </span>
         <h2>Book an Appointment</h2>
-        {/* Add your appointment form here */}
         <button onClick={onSubmit}>Submit</button>
       </div>
     </div>

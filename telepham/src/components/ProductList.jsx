@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { addToCart } from "../Redux/Cart/action";
 import LoadingSpinner from "./Spinner/Spinner";
-import { ToastContainer, toast } from "react-toastify"; // Import toast notifications
-import "react-toastify/dist/ReactToastify.css"; // Import the toast styles
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductList() {
   const dispatch = useDispatch();
@@ -37,10 +37,9 @@ function ProductList() {
     const existingItem = cart.find((item) => item.id === id);
 
     if (existingItem) {
-      //  toast.error for an error notification
       toast.error("Product already present in the cart", {
         position: "top-center",
-        autoClose: 3000, // Auto-close the toast after 3 seconds
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -49,7 +48,7 @@ function ProductList() {
     } else {
       const itemToAdd = product.find((item) => item.id === id);
       addToCart(dispatch, itemToAdd);
-      //  toast.success for a success notification
+
       toast.success("Product added to the cart", {
         position: "top-center",
         autoClose: 3000,

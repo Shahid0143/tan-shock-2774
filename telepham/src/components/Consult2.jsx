@@ -11,13 +11,9 @@ function Consult2() {
   const [gender, setGender] = useState("");
   const [popup, setPopup] = useState("none");
 
-  // Initialize arr within the component's scope
   const arr = JSON.parse(localStorage.getItem("consult")) || [];
 
-  // Retrieve existing data from local storage when the component mounts
   useEffect(() => {
-    // You can set the retrieved data to your state variables if needed
-    // For example, if you want to display the last stored entry:
     if (arr.length > 0) {
       const lastEntry = arr[arr.length - 1];
       setName(lastEntry.name);
@@ -45,11 +41,8 @@ function Consult2() {
       gender,
     };
 
-    // Retrieve the existing data from local storage (already initialized as arr)
-    // Add the new form data to the existing data
     arr.push(Form);
 
-    // Save the updated data back to local storage
     localStorage.setItem("consult", JSON.stringify(arr));
   };
   return (

@@ -4,13 +4,13 @@ import ManageAdmins from "./ManageAdmins";
 import ManageProducts from "./ManageProducts";
 import ManageOrders from "./ManageOrders";
 import AddProducts from "./AddProducts";
-import AddAdmins from "./Addadmin"
+import AddAdmins from "./Addadmin";
 export const AdminRoutes = () => {
   return (
     <>
       <Routes>
- {/*index ->  by default Products page will be shown on admin page  */}
-        <Route   index   element={<ManageAdmins />} />
+        {/*index ->  by default Products page will be shown on admin page  */}
+        <Route index element={<ManageAdmins />} />
         <Route path="/manageorders" element={<ManageOrders />}></Route>
         <Route path="/manageproducts" element={<ManageProducts />}></Route>
         <Route path="/manageadmins" element={<ManageAdmins />}></Route>
